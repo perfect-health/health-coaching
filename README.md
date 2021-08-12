@@ -4,14 +4,14 @@ This website interested in health and helps the clients to obtain a healthy prog
 Group name : HC/ Group03
 
 Team member :
-1. Razan Armouti (TA)
+1. Razan Armouti (TL)
+2. Rahaf Ahmad 
 
-2. Emad Qandalaft
+3. Emad Qandalaft
 
-3. Marah Karahwaez
+4. Marah Karahwaez
 
-4. Eslam Tweikat
+5. Eslam Tweikat
 
-5. Raneem Abu jamous
+6. Raneem Abu jamous
 
-6. Rahaf Ahmad
