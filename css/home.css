@@ -1,0 +1,35 @@
+header{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1500px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+
+
+footer{
+    width: 1500px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+
+header section :nth-child(0){
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+main{
+    width: 1500px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+.sections{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+#subscribe{
+    
+   
+}
