@@ -4,7 +4,7 @@
 	max-width: 400px;
 	padding: 20px 12px 10px 20px;
 	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: rgb(31, 196, 133);
+    color: #4ab1ca;
 }
 .form-style li {
 	padding: 0;
@@ -45,8 +45,8 @@ select{
     -moz-box-shadow: 0 0 8px #88D5E9;
 	-webkit-box-shadow: 0 0 8px #88D5E9;
 	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
-    width: 50px;
-    height: 50px;
+	border: 1px solid #4ab1ca;
+    width: 300px;
+    height: 200px;
 
 }
