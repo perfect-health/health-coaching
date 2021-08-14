@@ -1,6 +1,9 @@
 'use strict';
 
-
+window.addEventListener('load', () => {
+const preload = document.querySelector('.preload');
+preload.classList.add('preload-Finish');
+});
 
 const userForm = document.getElementById('userForm');
 let userProfile = document.getElementById('userProfile');
@@ -116,7 +119,7 @@ console.log(this.valueBMI.toFixed(1));
         healthyTipsBtn.setAttribute('onclick' ," window.open('./index.html')");
         resultSec.appendChild(healthyTipsBtn);
 
-    }else if(this.valueBMI.toFixed(1) > 25 && this.valueBMI.toFixed(1) < 29.9){
+    }else if(this.valueBMI.toFixed(1) > '25' && this.valueBMI.toFixed(1) < '29.9'){
         console.log('3rdCondition');
 
         let h3rdElement = document.createElement('h3');
