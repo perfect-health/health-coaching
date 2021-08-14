@@ -13,27 +13,53 @@
 <body>
     <header>
     </header>
-    <main id="mainSec">
+    <main>
+        <div class="stage">
+            <img src="./appleBall.png" class="ball"></img>
+        <section class="journeyPage" >
 
-        <section class="journeyPage">
-            <section class="userInfoSection">
-<section>
-    <h1>Take control </h1>
-    <h4> Knowing your BMI can help put you on the right path to better health.</h4>
-    <img src="https://www.dentonmedical.co.uk/media/content/images/BMI-Calculator1.jpg" alt="" srcset="">
-</section>
+            <section class="heroSection">
+                <div>
+                    <h1>Take control </h1>
+                    <h4> Knowing your BMI can help put you on the right path to better health.</h4>
+                </div>
+                <img src="https://www.dentonmedical.co.uk/media/content/images/BMI-Calculator1.jpg" alt="" srcset="" class="swing">
+            </section>
 
-                <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. 
-                     <br>
+            
+                
+              
+
+            <section class="defineSection">
+                <img class="imgForm"
+                    src="https://vajiramandravi.s3.us-east-1.amazonaws.com/media/2020/11/7/8/48/23/BMI.jpg" alt=""
+                    srcset="">
+                <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men
+                    and
+                    women.
+                    <br>
                     Enter your information below to compute your BMI using metric measures.
-                    Just press on "Compute BMI" and your BMI will appear below.</p>
+                    Just press on "Compute BMI" and your BMI will appear below.
+                </p>
+            </section>
+            
+        <div id="hr2" class="appleHR" style="background:url(./hr-img.png) repeat top center;">
+    
+            <img src="./appleBall.png" alt="" id="hrImg">
+    
+            </hr>
+        </div>
+            <section class="userFormSection">
                 <fieldset>
                     <h1>let's know Your Body Mass Index (BMI)!</h1>
-                    <form id ="userForm">
+                    <form id="userForm">
                         <ul class="form-style">
                             <li><label>Full Name <span class="required">*</span></label>
-                                <input type="text" name="field1" class="field-divided" placeholder="First" id="firstName"/> 
-                                <input type="text" name="field2"  class="field-divided" placeholder="Last" id="lastName"/></li>
+                                <input type="text" name="field1" class="field-divided" placeholder="First"
+                                    id="firstName" />
+                                <input type="text" name="field2" class="field-divided" placeholder="Last"
+                                    id="lastName" />
+                            </li>
                             <li>
                                 <label>Your Age <span class="required">*</span></label>
                                 <input type="number" name="field3" class="field-long" id="age" />
@@ -47,7 +73,7 @@
                             </li>
                             <li>
                                 <label>Your Weight <span class="required">*</span></label>
-                                <input type="number" name="field5" id="weight" placeholder="kilograms" 
+                                <input type="number" name="field5" id="weight" placeholder="kilograms"
                                     class="field-long field-textarea"></textarea>
                             </li>
                             <li>
@@ -56,32 +82,34 @@
                                     class="field-long field-textarea"></textarea>
                             </li>
                             <li>
-                                <input type="submit" value="Compute BMI" id="submitBtn"/>
+                                <input type="submit" value="Compute BMI" id="submitBtn" class="styleBMIbtn" />
                             </li>
                         </ul>
                     </form>
 
 
                 </fieldset>
-            </section>
-            <section>
-                <img class="imgForm"
-                    src="https://vajiramandravi.s3.us-east-1.amazonaws.com/media/2020/11/7/8/48/23/BMI.jpg" alt=""
-                    srcset="">
+                <div>
+                    <img src="./bmi-heart.png" alt="" srcset="" class="bmiClculatorImg swing">
+                </div>
+
 
             </section>
 
+            
+
+            <section class="showResultSection">
+                <div id="userProfile">
+                    <!-- DOM -->
+                </div>
+
+                <div id="resultSec"></div>
+            </section>
 
         </section>
 
-        <div id="userProfile">
-                        <!-- DOM -->
-         </div>
-         
-         <div id="resultSec"></div>
-
-
-
+    </div>
+        
     </main>
     <footer>
     </footer>
