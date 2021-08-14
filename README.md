@@ -15,3 +15,7 @@ Team member :
 5. Raneem Abu jamous
 
 6. Emad Qandalaft
+
+
+Domain Modeling:
+![Domain Modeling](./img/DomainModel.png)
