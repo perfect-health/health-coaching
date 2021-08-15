@@ -23,6 +23,7 @@ function user(firstName, lastName, age, gender, weight, height) {
 
 
 
+
 user.prototype.calculateBMI = function (weight, height) {
     /*      Formula: weight (kg) / [height (m)]2
    
@@ -82,7 +83,8 @@ function submitHandler(event) {
     console.log(typeof firstName, lastName, age, gender, weight, height);
 
     let newUser = new user(firstName, lastName, age, gender, weight, height);
-    newUser.calculateBMI(weight, height);
+    localStorage.userData = JSON.stringify(newUser);
+       newUser.calculateBMI(weight, height);
     newUser.render();
 }
 
@@ -119,7 +121,7 @@ console.log(this.valueBMI.toFixed(1));
         healthyTipsBtn.setAttribute('onclick' ," window.open('./index.html')");
         resultSec.appendChild(healthyTipsBtn);
 
-    }else if(this.valueBMI.toFixed(1) > '25' && this.valueBMI.toFixed(1) < '29.9'){
+    }else if(this.valueBMI.toFixed(1) > 25 && this.valueBMI.toFixed(1) < 29.9){
         console.log('3rdCondition');
 
         let h3rdElement = document.createElement('h3');
@@ -138,6 +140,16 @@ console.log(this.valueBMI.toFixed(1));
     }*/
 
 
+}
+
+function getData(){
+if(localStorage.data){
+let data = JSON.parse(localStorage.data);
+for(let i =0; i < data.length; i++){
+    new user(data[i].firstName, data[i].lastName, data[i].age, data[i].gender, data[i].weight, data[i].height)
+
+}
+}
 }
 
 
