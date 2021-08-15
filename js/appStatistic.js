@@ -1,10 +1,9 @@
 'use strict';
-getData();
-(data[i].lastName, data[i].age, data[i].gender, data[i].weight, data[i].height, data[i].valueBMI)
+let data = getData();
 
 let getUl = document.getElementById('ul');
-for(let i =0; i < 7; i++){
-    
+for (let i = 0; i < data.length; i++) {
+
   let createLi = document.createElement('li');
   createLi.textContent = data[i].lastName;
   getUl.appendChild(createLi);
@@ -29,55 +28,55 @@ for(let i =0; i < 7; i++){
   createLi.textContent = data[i].valueBMI;
   getUl.appendChild(createLi);
 }
-getData();
+
 let countFemale = 0;
 let countMale = 0;
 
 console.log(data);
-for(let i =0; i < data.length; i++){
-  let first =   data[i].gender;
-  if (gender=== male) {countMale++}else{
-      if (gender=== female) {countFemale++}
+for (let i = 0; i < data.length; i++) {
+  let first = data[i].gender;
+  if (first === 'male') { countMale++; } else {
+  countFemale++;
   }
-  countFemale = 0;
-countMale = 0;
-   data[i].lastName, data[i].age, data[i].gender, data[i].weight, data[i].height, data[i].valueBMI);
-  // user.allUsers.push(userNew);
+}
+//data[i].lastName, data[i].age, data[i].gender, data[i].weight, data[i].height, data[i].valueBMI);
+// user.allUsers.push(userNew);
 
-result.addEventListener( 'button', viewChart );
+document.getElementById('button').addEventListener('click', viewChart);
 function viewChart() {
-    creatChart();
+  creatChart();
 }
 function creatChart() {
-  
+console.log();
   let valueBMI = [];
-  for ( let i = 0; i < localStorage.allUsers.length; i++ ) {
-   
-    valueBMI.push( localStorage.allUsers[i].valueBMI );
-    
+  for (let i = 0; i < data.length; i++) {
+
+    valueBMI.push(data[i].valueBMI);
+
   }
-  var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+  let ctx = document.getElementById('myChart').getContext('2d');
+  let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: [countFemale, countMale],
-        datasets: [{
-            label: '# of Users',
-            data: [valueBMI],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-            ],
-            borderWidth: 1
-        }]
+      labels: ['Female', 'Male'],
+      datasets: [{
+        label: '# of Users',
+        data: [countFemale, countMale],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+        ],
+        borderWidth: 1
+      }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
+      scales: {
+        y: {
+          beginAtZero: true
         }
+      }
     }
-});
+  });
+}
