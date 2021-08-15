@@ -1,6 +1,7 @@
 body {
   font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
   margin: auto;
+  width: 1200px;
 }
 /* img{
   height:550px ;
@@ -109,7 +110,10 @@ font-size: 30px;
 }
 .side3 img{
   width: 275px;
+  
+  height: 185px;
 }
+
 .card3 .back3 {
   background: #f3a861;
   color: #423d38;
@@ -155,7 +159,96 @@ font-size: 30px;
   transform: rotateY(180deg);
 }
 
+.header{
+  margin: 50px;
+  font-size: revert;
+}
+#cart {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse:separate;
+  width: 1100px;
+margin:10px;
+  font-size: larger;
+}
 
+#cart td, #cart th {
+  border: 3px groove #78aa98;
+  padding: 8px;
+}
 
+#cart tr:nth-child(even){background-color: #f2f2f2;}
 
+#cart tr:hover {background-color: #ddd;}
 
+#cart th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #78aa98;
+  color: white;
+}
+.section2 .loss-p{
+  font-size: 25px;
+  line-height: 1.5;
+
+scroll-behavior:smooth;
+background-color: lightblue;
+
+height: 200px;
+overflow: scroll;
+  padding: 10px; 
+    margin: 10px; 
+   border: bisque;
+     border-color: azure; 
+     border-style: inset;
+  
+}
+
+.section3{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  background-image: url("loss14.jpg");
+}
+#getAplan{
+  width: 500px;
+
+}
+#sideImg img{
+  width: 500px;
+  opacity: 0.2;
+}
+
+#headerSection3{
+  font-size: 30px;
+  margin: 20px;
+}
+#planButton{
+  border-radius: 4px;
+  background-color: #61a1a3;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 490px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#planButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#planButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
