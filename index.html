@@ -8,19 +8,28 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Health Coaching</title>
 </head>
 
 <body>
     <header>
-        <section>
-            <div><img src="./img/Home/logo1.jpg" alt="hcLogo" id="logo">
+        <section id="headersec">
+            <div><a href="index.html"><img src="./img/Home/logo1.jpg" alt="hcLogo" id="logo"></a>
                 <h1 class="shimmer">Healthy Coaching</h1>
             </div>
-            <!-- <nav>
-                <a href="">Healthy Tips</a>
-            </nav> -->
+            <div id="menue">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="./html/page2new.html">Healthy Tips</a></li>
+                        <li><a href="./html/service.html">Service Provider</a></li>
+                        <li><a href="./html/therapy.html">Therapy Group</a></li>
+                        <li><a href="./html/exam.html">Quiz</a></li>
+                    </ul>
+                </nav>
 
+            </div>
         </section>
 
     </header>
@@ -42,7 +51,7 @@
 
         <section>
             <div class="wrap">
-                <a href="./html/journey.html">   <button class="button">Start Journey</button></a>
+                <a href="./html/journey.html"> <button class="button">Start Journey</button></a>
             </div>
 
         </section>
@@ -50,7 +59,7 @@
 
             <img src="./img/Home/V1.png" alt="visionImg">
             <article>
-                <p class="font">
+                <p class="font" id="pvision">
                     <span class="slogin" data-uw-styling-context="true">Our Vision</span><br> helps you see the big
                     picture of your well-being. It
                     describes your ideal state of physical and emotional health—your “best self”—and what it would look
@@ -69,12 +78,14 @@
                     create a ripple effect that transforms the world.
                 </p>
             </article>
-            <iframe width="500" height="400" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/Zd00oIDAt60?autoplay=1&mute=1">
+            <iframe width="500" height="400" frameborder="0" allowfullscreen
+                src="https://www.youtube.com/embed/Zd00oIDAt60?controls=0&&showinfo=0&">
+                <!-- autoplay=1&mute=1&&loop=1& -->
             </iframe>
         </section>
         <section>
             <div class="wrap">
-             <a href="./html/journey.html">   <button class="button">Start Journey</button></a>
+                <a href="./html/journey.html"> <button class="button">Start Journey</button></a>
             </div>
 
         </section>
@@ -82,31 +93,45 @@
     </main>
     <footer>
 
-        <!-- <section id="subscribe">
-            <h1>SUBSCRIBE TO THE MAILING LIST & STAY CONNECTED</h1>
-            <form action="">
-                <label for="firstNameText">First Name*</label>
-                <input type="text" id="firstNameText" required>
-                <label for="lastNameText">Last Name*</label>
-                <input type="text" id="lastNameText" required>
-                <label for="emailText">Email Address*</label>
-                <input type="text" id="emailText" required>
-                <input type="submit" value="SUBSCRIBE">
-            </form>
-        </section> -->
+       
 
         <section class="sections">
             <div>
-                <h5> +962 6 585 7187 | info@health-coaching.com</h5>
+                <section id="subscribe">
+                    <!-- <h1>SUBSCRIBE TO THE MAILING LIST & STAY CONNECTED</h1> -->
+                    <form action="">
+                        <!-- <label for="firstNameText">First Name*</label>
+                        <input type="text" id="firstNameText" required>
+                        <label for="lastNameText">Last Name*</label>
+                        <input type="text" id="lastNameText" required> -->
+                        <!-- <label for="emailText">Email Address*</label> -->
+                        <h6>
+                        <input type="text" id="emailText" value="Enter your email" required>
+                        <input type="submit" value="SUBSCRIBE"></h6>
+                    </form>
+                </section>
+                
+                <h6> +962 6 585 7777 | info@health-coaching.com</h6>
+              
                 <h6>&copy; 2021 Health Coaching - All Rights Reserved.</h6>
             </div>
 
-            <nav>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="FB"></a>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="linkedin"></a>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="twitter"></a>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="youtube"></a>
-            </nav>
+            <div id="socialmedia">
+               
+                <nav>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+    
+                </nav>
+                
+
+            </div>
+
+            
 
         </section>
 
