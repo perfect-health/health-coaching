@@ -1,98 +1,102 @@
 
- 'use strict';
- let planArray=[
-     'plan1.jpg',
-     'plan2.jpg',
-     'plan3.jpg',
-     'plan4.jpg',
-     'plan5.jpg'
- ]
-let all=[];
+'use strict';
+let planArray = [
+    'plan1.jpg',
+    'plan2.jpg',
+    'plan3.jpg',
+    'plan4.jpg',
+    'plan5.jpg'
+]
+let all = [];
+let counter = 0;
+// let numberOfRound =5;
 
-// // Create an event listener so that when the delete link is clicked, the removeItemFromCart method is invoked.
-// var table = document.getElementById('cart');
-// table.addEventListener('click', removeItemFromCart);
-// var cart;
+let planButton = document.getElementById('planButton');
+let planImg = document.getElementById('planImg');
 
-// function loadCart() {
-//   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-//   cart = new Cart(cartItems);
-// }
+function show(name, imageSrc) {
+    this.name = name;
+    this.image = imageSrc;
+    this.shown = 0;
+    show.all.push(this);
+}
+show.all = [];
+for (let i = 0; i < planArray.length; i++) {
+    new show(planArray[i].split('.')[0], planArray[i]);
+}
+console.log(show.all);
 
-// // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
-// function renderCart() {
-//   loadCart();
-//   clearCart();
-//   showCart();
-// }
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-// // TODO: Remove all of the rows (tr) in the cart table (tbody)
-// function clearCart() {
-//   document.getElementsByTagName('tr').innerHTML = '';
+function render() {
+    let imgRandom = random(0, planArray.length - 1);
+    planImg.src = '../loss-wieght-media/plan/' + show.all[imgRandom].image;
+    show.all[imgRandom].show++;
+    console.log(show.all)
+}
 
-  
-
-//   // var table = document.getElementById('cart');
-
-//   // try somethings new with childNodes
-//   credit : https://www.w3schools.com/jsref/prop_node_childnodes.asp
-
-//   // var tbody = table.childNodes;
-//   // console.log(tbody[0].childNodes);
-  
-//   credit: https://www.w3schools.com/jsref/prop_node_firstchild.asp
-//   // var nodes = tbody.firstChild;
-
-
-//   credit: https://www.w3schools.com/jsref/met_node_removechild.asp
-//   // for (var i = 0; i < cart.items.length; i++) {
-//   //   //tbody.removeChild(tbody.firstChild);
-//   // }
-// }
-
-// // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
-// function showCart() {
-
-//   // TODO: Find the table body
-//   var tbody = document.getElementsByTagName('tbody');
-
-//   // TODO: Add the TR to the TBODY and each of the TD's to the TR
-//   // TODO: Iterate over the items in the cart
-//   for (var i = 0; i < cart.items.length; i++) {
-//     // TODO: Create a TR
-//     var tr = document.createElement('tr');
-//     tr.setAttribute('id', i);
-//     tbody.appendChild(tr);
-  
-//     // TODO: Create a TD for the delete link, quantity,  and the item
-//     var killTd = document.createElement('td');
-//     killTd.textContent = 'X';
-//     tr.appendChild(killTd);
-
-//     var quantityTd = document.createElement('td');
-//     quantityTd.textContent = cart.items[i].quantity;
-//     tr.appendChild(quantityTd);
-
-//     var itemTd = document.createElement('td');
-//     itemTd.textContent = cart.items[i].product;
-//     tr.appendChild(itemTd);
-//   }
-// }
+planButton.addEventListener('click', clicHandler);
+function clicHandler(event) {
+    event.preventDefault()
+    if (counter < planArray.length) {
+        render();
+        counter++;
+        console.log(event)
+    }
+}
 
 
-// function removeItemFromCart(event) {
+let getData;
 
-//   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
-//   if (event.target.textContent === 'X') {
-//     cart.removeItem(event.target.id); 
-//     // I think somethings needs to be added between target.''. id
-//   }
-//   // TODO: Save the cart back to local storage
-//   localStorage.setItem('cart', JSON.stringify(cart.items));
-//   // TODO: Re-draw the cart table
-//   renderCart();
+let table = document.getElementById('cart');
 
-// }
+let cart;
 
-// // This will initialize the page and draw the cart on screen
-// renderCart();
+function loadCart() {
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = new Cart(cartItems);
+}
+
+function renderCart() {
+    loadCart();
+    showCart();
+}
+
+let cartTable = document.getElementById('cart');
+let tbody = table.childNodes;
+console.log(tbody[0].childNodes);
+let nodes = tbody.firstChild;
+
+for (var i = 0; i < cart.items.length; i++) {
+    tbody.removeChild(tbody.firstChild);
+}
+
+function showCart() {
+    let tbody = document.getElementsByTagName('tbody');
+    for (let i = 0; i < cart.items.length; i++) {
+
+        let tr = document.createElement('tr');
+        tr.setAttribute('id', i);
+        tbody.appendChild(tr);
+
+        let name = document.createElement('td');
+        name.textContent = cart.items[i].quantity;
+        tr.appendChild(name);
+
+        let weight = document.createElement('td');
+        weight.textContent = cart.items[i].product;
+        tr.appendChild(weight);
+
+        let gender = document.createElement('td');
+        gender.textContent = cart.items[i].product;
+        tr.appendChild(gender);
+    }
+}
+
+// Save the cart back to local storage
+localStorage.setItem('cart', JSON.stringify(cart.items));
+renderCart();
+
+
