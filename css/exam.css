@@ -1,0 +1,103 @@
+body{
+    width: 960px;
+         background-color: #faefef;
+}
+h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 80px;
+    margin: 20px;
+    color: #625757;
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight:bolder;
+    letter-spacing: 15px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+button{
+    position: relative;
+            left: 50px;}
+            .think{
+                position: relative;
+                left:  1300px;
+                bottom:  620px;
+                width: 200px;
+            }
+            .think2{
+    
+                position: absolute;
+                left:  1000px;
+                bottom:  -50px;
+            }
+            .think{
+                -webkit-animation: mover 2s infinite  alternate;
+                animation: mover 2s infinite  alternate;
+            }
+            @-webkit-keyframes mover {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-20px); }
+            }
+            @keyframes mover {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-20px); }
+            }
+            
+            .think2:hover {
+                display: inline-block;
+                margin: 0 0.9rem;
+              
+                animation: bounce; /* referring directly to the animation's @keyframe declaration */
+                animation-duration: 3s; /* don't forget to set a duration! */
+              }
+            
+              fieldset{
+                padding: 20px;
+           border-radius: 20px;
+           margin: 20px;  
+           border:outset;  }
+            label{
+                display: block;
+                font-family: 'Caveat', cursive;
+                font-family: 'Indie Flower', cursive;
+                font-family: 'Patrick Hand', cursive;
+                font-size: 25px;
+                line-height: 59px;
+           
+            }
+            legend{
+              
+               font-family: 'Indie Flower', cursive;
+               font-size: 40px;
+               color: #464141;
+            }
+            span{
+                margin-right: 20px;
+               transition: all 30ms;
+               cursor: pointer
+           }
+            .name{
+                display: inline-block;
+                margin-right: 20px;}
+           
+                
+               span:hover{
+                   font-size: 30px;
+                   color: rgb(243, 202, 18);
+                   cursor: pointer;
+           
+               }
+              
+               fieldset {
+                   position: relative;
+                   top: 200px;
+                   left: 10px;
+                   border: auto;
+                   
+               }
+               form{
+                   margin: 10px;
+                   padding: 10px;
+                   color: #3d3a3a;
+           
+               }
