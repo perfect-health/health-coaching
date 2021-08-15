@@ -26,8 +26,9 @@ function SubmitHandlerforRender(event) {
   event.preventDefault();
   if (/^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/.test(subform.emailText.value))
   {
-    alert("Thanks for subscribing", "Health Coaching");
- 
+    
+    document.getElementById('alert').innerHTML='Thanks for subscribing';
+
   }
 
 }
