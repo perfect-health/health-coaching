@@ -1,0 +1,254 @@
+
+body{
+    width: 960px;
+         background-color: #faefef;
+}
+section{
+    margin-left: 50px;
+}
+h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px;
+    margin: 20px;
+    text-align: right;
+    color: #625757;
+    text-transform: uppercase;
+
+
+}
+h3{
+    font-family: 'Caveat', cursive;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    margin: 20px;
+    padding: 10px;
+    color: #5c5858;
+
+    text-transform: capitalize;
+
+
+}
+ul{
+    font-family: 'Caveat', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Patrick Hand', cursive;
+margin: 10px;
+text-transform: capitalize;
+
+
+}
+
+ li {
+     line-height: 35px;
+     list-style-type: lower-roman;
+     color: rgb(65, 63, 64);
+font-size: 20px;
+ }
+ a{
+     text-decoration: none;
+margin-left: 10px;
+
+ }
+ a :hover{
+     cursor: pointer;
+     font-weight: 60px;
+
+ }
+ .mainimg{
+     display: grid;
+     grid-template-rows: auto auto auto;
+     gap: 20px;
+
+ }
+ .imgone{
+    position: absolute;
+    right: 150px;
+    top: 170px;
+ }
+ .imgtow{
+    position: absolute;
+    right: 300px;
+    top: 500px;
+ }
+ 
+ img{
+     display: inline-block;
+    width: 400px;
+    height: 300px;
+    float: right;
+    border-radius: 20px;
+    display: block;
+
+
+ }
+ fieldset{
+     padding: 20px;
+border-radius: 20px;
+margin: 20px;  
+border:outset;  }
+ label{
+     display: block;
+     font-family: 'Caveat', cursive;
+     font-family: 'Indie Flower', cursive;
+     font-family: 'Patrick Hand', cursive;
+     font-size: 25px;
+     line-height: 59px;
+
+ }
+ legend{
+   
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    color: #464141;
+ }
+ span{
+     margin-right: 20px;
+    transition: all 30ms;
+    cursor: pointer
+}
+ .name{
+     display: inline-block;
+     margin-right: 20px;}
+
+     
+    span:hover{
+        font-size: 30px;
+        color: rgb(243, 202, 18);
+        cursor: pointer;
+
+    }
+   
+    fieldset {
+        position: relative;
+        top: 240px;
+        left: 10px;
+        border: auto;
+        
+    }
+    form{
+        margin: 10px;
+        padding: 10px;
+        color: #3d3a3a;
+
+    }
+    .text {
+        white-space: nowrap; 
+        color: rgb(54, 51, 54);
+        font-size: 30px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-family: 'Indie Flower', cursive;
+        font-size: 20px;
+        margin: auto;
+        font-weight: bold;
+      }
+      .imgone:hover .overlay {
+        bottom: 0;
+        height: 100%;
+      }
+      .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FDEFEF;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+        border-radius: 20px;
+      }
+      .imgtow:hover .overlay {
+        bottom: 0;
+        height: 100%;
+      }
+     .icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        /* bottom:  200px;
+        right: 344px; */
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        float: right ;
+        top: 50px;
+        right: 20px;
+      }
+      @keyframes example {
+        0%   {left:0px; top:0px;}
+        25%  { left:20px; top:0px;}
+        50%  { left:20px; top:20px;}
+        75%  {left:0px; top:20px;}
+        100% { left:0px; top:0px;}
+      }
+     
+      /* #chartdiv {
+        width: 100%;
+        height: 500px;
+      } */
+      .video-container {
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+      
+        }
+        
+        #video-bg{
+          width:100%;
+          opacity : 0.5;
+        }
+        
+        /* .dot {
+            height: 25px;
+            width: 25px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            top: 190px;
+            left: 150px;
+          } */
+          button{
+position: relative;
+        left: 50px;}
+        .think{
+            position: relative;
+            left:  500px;
+            bottom:450px;
+        }
+        .think2{
+
+            position: relative;
+            left:  860px;
+            bottom:80px;
+        }
+        .think{
+            -webkit-animation: mover 2s infinite  alternate;
+            animation: mover 2s infinite  alternate;
+        }
+        @-webkit-keyframes mover {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        @keyframes mover {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        
+        .think2:hover {
+            display: inline-block;
+            margin: 0 0.9rem;
+          
+            animation: bounce; /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 3s; /* don't forget to set a duration! */
+          }
+         
