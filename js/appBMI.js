@@ -8,8 +8,7 @@ preload.classList.add('preload-Finish');
 const userForm = document.getElementById('userForm');
 let userProfile = document.getElementById('userProfile');
 let resultSec = document.getElementById('resultSec');
-let countFemale = 0;
-let countMale = 0;
+
 
 
 function user(firstName, lastName, age, gender, weight, height, valueBMI) {
