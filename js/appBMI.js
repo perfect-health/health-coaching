@@ -8,9 +8,11 @@ preload.classList.add('preload-Finish');
 const userForm = document.getElementById('userForm');
 let userProfile = document.getElementById('userProfile');
 let resultSec = document.getElementById('resultSec');
+let countFemale = 0;
+let countMale = 0;
 
 
-function user(firstName, lastName, age, gender, weight, height) {
+function user(firstName, lastName, age, gender, weight, height, valueBMI) {
 
     this.firstName = firstName;
     this.lastName = lastName;
@@ -18,8 +20,14 @@ function user(firstName, lastName, age, gender, weight, height) {
     this.gender = gender;
     this.weight = weight;
     this.height = height;
-    this.valueBMI = 0;
+    this.valueBMI = valueBMI;
+    user.allUsers.push( this );
    };
+
+   user.allUsers = [];
+   
+     getData();
+   console.log(user.allUsers);
 
 
 
@@ -32,7 +40,7 @@ user.prototype.calculateBMI = function (weight, height) {
 
     let heightinMeter = height / 100;
     this.valueBMI = Number(weight / Math.pow(heightinMeter, 2));
-    //return valueBMI;
+    return this.valueBMI;
 };
 
 user.prototype.render = function () {
@@ -62,7 +70,6 @@ user.prototype.render = function () {
     h6Element.textContent = `What Next? Take Action Towards Better Health! You can use your BMI result as a starting point for a healthy lifestyle.`;
     articleElement.appendChild(h6Element);
 
-    
    this.checkBMIresult();
 
 };
@@ -82,16 +89,20 @@ function submitHandler(event) {
 
     console.log(typeof firstName, lastName, age, gender, weight, height);
 
-    let newUser = new user(firstName, lastName, age, gender, weight, height);
-    localStorage.userData = JSON.stringify(newUser);
-       newUser.calculateBMI(weight, height);
+    let newUser = new user(firstName, lastName, age, gender, weight, height, this.valueBMI);
+   newUser.calculateBMI(weight, height);
     newUser.render();
+    
+    console.log(user.allUsers);
+    localStorage.userData = JSON.stringify(user.allUsers);
+    getData();
+    
 }
 
  user.prototype.checkBMIresult = function(){
 
 console.log('hi form check');
-console.log(this.valueBMI.toFixed(1));
+console.log(typeof this.valueBMI.toFixed(1));
 
     if(this.valueBMI.toFixed(1) <= 18.5){
      
@@ -134,6 +145,9 @@ console.log(this.valueBMI.toFixed(1));
          overWeightBtn.setAttribute('onclick' , "window.open('./index.html')");
         resultSec.appendChild(overWeightBtn);
 
+    } else {
+        console.log('grater than 30');
+
     }
     /*else if(this.valueBMI.toFixed(1) >= 30){
 
@@ -143,13 +157,18 @@ console.log(this.valueBMI.toFixed(1));
 }
 
 function getData(){
-if(localStorage.data){
-let data = JSON.parse(localStorage.data);
-for(let i =0; i < data.length; i++){
-    new user(data[i].firstName, data[i].lastName, data[i].age, data[i].gender, data[i].weight, data[i].height)
-
+if(localStorage.userData){
+let data = JSON.parse(localStorage.userData);
+ user.allUsers = data;
+console.log(data);
+//for(let i =0; i < data.length; i++){
+  //let userNew =   new user(data[i].firstName, data[i].lastName, data[i].age, data[i].gender, data[i].weight, data[i].height, data[i].valueBMI);
+  // user.allUsers.push(userNew);
+   //return
+//}
 }
 }
-}
 
+//let userA = getData();
 
+//console.log(userA);
