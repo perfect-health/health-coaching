@@ -142,7 +142,7 @@ console.log(typeof this.valueBMI.toFixed(1));
         let overWeightBtn = document.createElement('input');
         overWeightBtn.setAttribute('type','button');
         overWeightBtn.setAttribute('value' , "Weight Loss Support");
-         overWeightBtn.setAttribute('onclick' , "window.open('./index.html')");
+         overWeightBtn.setAttribute('onclick' , "window.open('./html/loss-wieght.html')");
         resultSec.appendChild(overWeightBtn);
 
     } else {
