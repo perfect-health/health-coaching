@@ -1,4 +1,3 @@
-
 'use strict';
 let planArray = [
     'plan1.jpg',
@@ -9,7 +8,7 @@ let planArray = [
 ]
 let all = [];
 let counter = 0;
-// let numberOfRound =5;
+//  let numberOfRound =5;
 
 let planButton = document.getElementById('planButton');
 let planImg = document.getElementById('planImg');
@@ -48,55 +47,55 @@ function clicHandler(event) {
 }
 
 
-let getData;
 
-let table = document.getElementById('cart');
 
-let cart;
+// let table = document.getElementById('cart');
 
-function loadCart() {
-    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    cart = new Cart(cartItems);
-}
+// let cart;
 
-function renderCart() {
-    loadCart();
-    showCart();
-}
+// function loadCart() {
+//     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+//     cart = new Cart(cartItems);
+// }
 
-let cartTable = document.getElementById('cart');
-let tbody = table.childNodes;
-console.log(tbody[0].childNodes);
-let nodes = tbody.firstChild;
+// function renderCart() {
+//     loadCart();
+//     showCart();
+// }
 
-for (var i = 0; i < cart.items.length; i++) {
-    tbody.removeChild(tbody.firstChild);
-}
+// let cartTable = document.getElementById('cart');
+// let tbody = table.childNodes;
+// console.log(tbody[0].childNodes);
+// let nodes = tbody.firstChild;
 
-function showCart() {
-    let tbody = document.getElementsByTagName('tbody');
-    for (let i = 0; i < cart.items.length; i++) {
+// for (var i = 0; i < cart.items.length; i++) {
+//     tbody.removeChild(tbody.firstChild);
+// }
 
-        let tr = document.createElement('tr');
-        tr.setAttribute('id', i);
-        tbody.appendChild(tr);
+// function showCart() {
+//     let tbody = document.getElementsByTagName('tbody');
+//     for (let i = 0; i < cart.items.length; i++) {
 
-        let name = document.createElement('td');
-        name.textContent = cart.items[i].quantity;
-        tr.appendChild(name);
+//         let tr = document.createElement('tr');
+//         tr.setAttribute('id', i);
+//         tbody.appendChild(tr);
 
-        let weight = document.createElement('td');
-        weight.textContent = cart.items[i].product;
-        tr.appendChild(weight);
+//         let name = document.createElement('td');
+//         name.textContent = cart.items[i].quantity;
+//         tr.appendChild(name);
 
-        let gender = document.createElement('td');
-        gender.textContent = cart.items[i].product;
-        tr.appendChild(gender);
-    }
-}
+//         let weight = document.createElement('td');
+//         weight.textContent = cart.items[i].product;
+//         tr.appendChild(weight);
 
-// Save the cart back to local storage
-localStorage.setItem('cart', JSON.stringify(cart.items));
-renderCart();
+//         let gender = document.createElement('td');
+//         gender.textContent = cart.items[i].product;
+//         tr.appendChild(gender);
+//     }
+// }
+
+// // Save the cart back to local storage
+// localStorage.setItem('cart', JSON.stringify(cart.items));
+// renderCart();
 
 
