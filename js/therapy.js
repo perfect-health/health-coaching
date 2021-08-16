@@ -35,25 +35,32 @@ let afterImage = document.getElementById('afterImage');
   this.afterImageSrc = imgAfterArray;
   };*/
 
+  let index = 0;
 
  function showImgs() {
 
-  for (let i = 0; i < imgBeforeArray.length; i++) {
-    //img/imgTherapy/story1-after.png
-    console.log( `../img/imgTherapy/${imgBeforeArray[i]}`);
+  beforeImage.src =  `../img/imgTherapy/${imgBeforeArray[index]}`
+  afterImage.src =  `../img/imgTherapy/${imgAfterArray[index]}`
 
-    beforeImage.setAttribute( 'src' , `../img/imgTherapy/${imgBeforeArray[i]}`);
+  index > 1 ? index = 0 : index++;
 
-    afterImage.src = `../img/imgTherapy/${imgAfterArray[i]}`;
-  }
-  setTimeout( 'showImgs' , 2000); // 3sec
+  // for (let i = 0; i < imgBeforeArray.length; i++) {
+  //   //img/imgTherapy/story1-after.png
+  //   console.log( `../img/imgTherapy/${imgBeforeArray[i]}`);
+
+  //   beforeImage.setAttribute( 'src' , `../img/imgTherapy/${imgBeforeArray[i]}`);
+
+  //   afterImage.src = `../img/imgTherapy/${imgAfterArray[i]}`;
+  //   setTimeout( 'showImgs()' , 2000); // 2sec
+
+  // }
 
 };
 
 
 
 window.onload = function(){
-  showImgs();
+  setInterval(showImgs, 2000);
 };
 
 const storyForm =  document.getElementById('storyForm');
