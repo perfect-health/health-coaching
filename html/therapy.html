@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start Journey</title>
     <link rel="stylesheet" href="../css/reset.css" type="text/css" />
-    
-    <link rel="stylesheet" href="../css/therapy.css" type="text/css" />
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="../css/therapy-Final.css" type="text/css" />
 
 </head>
 
 <body>
 
-    <div class="preload">
+    <!-- <div class="preload">
         <img src="../img/imgJourney/appleBall.png" class="appleHealthy" alt="" srcset="">
         <h3> Loading...</h3>
         <img src="../img/imgJourney/heartBeat1.png" class="heartBeat1" alt="" srcset="">
@@ -23,8 +27,25 @@
         <img src="../img/imgJourney/heartLine2.png" class="heartLine2" alt="" srcset="">
         <img src="../img/imgJourney/heartBeat3.png" class="heartBeat3" alt="" srcset="">
         <img src="../img/imgJourney/heartLine1.png" class="heartLine3" alt="" srcset="">
-    </div>
+    </div> -->
     <header>
+        <section id="headersec">
+            <div><a href="../index.html"><img src="../img/Home/logo1.jpg" alt="hcLogo" id="logo"></a>
+                <h1 class="shimmer">Healthy Coaching</h1>
+            </div>
+            <div id="menue">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="../index.html">Home</a></li>
+                        <li><a href="../html/page2new.html">Healthy Tips</a></li>
+                        <li><a href="../html/service.html">Service Provider</a></li>
+                        <li><a href="../html/therapy.html">Therapy Group</a></li>
+                        <li><a href="../html/exam.html">Quiz</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </section>
     </header>
 
     <main>
@@ -32,58 +53,48 @@
 
             <section class="therapyPage">
 
-                <h1>Successful People</h1>
+                <h5> DON'T STOP UNTIL YOU'RE PROUD</h5>
 
                 <section class="imageSection" id="imageSection">
                     <div class="beforeSection">
-                        <img   id="beforeImage">
-                        <h3>BEFORE</h3>
+                        <img id="beforeImage">
+                        <h3><span data-uw-styling-context="true" id="before">BEFORE</span></h3>
                     </div>
+                    <div class="hover02 column">
+                        <div>
+                            <figure> <img id="successimg" src="../img/imgTherapy/Vision-Therapy-Success-Story.png"
+                                    alt=""></figure>
+                        </div>
+                    </div>
+
                     <div class="afterSection">
-                        <img    id="afterImage">
-                        <h3>AFTER</h3>
+                        <img id="afterImage">
+                        <h3><span data-uw-styling-context="true" id="after">AFTER</span></h3>
+
                     </div>
-                    <h5>DON'T STOP UNTIL YOU'RE PROUD</h5>
+                    <!-- <h5>DON'T STOP UNTIL YOU'RE PROUD</h5> -->
 
                 </section>
 
 
                 <section class="motivationStorySection">
-
-                    <fieldset>
-                        <form id="storyForm">
-                            <ul class="form-style">
-
-                                <li>
-                                    <label> Enter your Name <span class="required">*</span></label>
-                                    <input type="text" name="field3" class="field-long" id="userName" />
-                                </li>
-                                <li>
-                                    <h1> GIVE US A PUSH OF YOUR STORY </h1>
-                                    <textarea name="story" id="storyText" cols="15" rows="15"></textarea>
-                                </li>
-                                <li>
-                                    <input type="submit" value="SHARE" id="submitBtn" class="styleBMIbtn" />
-                                </li>
-                            </ul>
-                        </form>
-                    </fieldset>
-                    <div>
-                        <img src="../img/imgTherapy/Vision-Therapy-Success-Story.png" alt="" srcset=""
-                            class="successStory">
-                    </div>
-
-                </section>
-
-                <div id="hr2" class="appleHR" style="background:url(../img/imgJourney/hr-img.png) repeat top center;">
-                    </hr>
+                 <div id="storydiv">
+                    <h4 class="area">GIVE US A PUSH OF YOUR STORY</h4>
+                    <br>
+                    <form id="storyForm" action="">
+                       <label for="userName" id="lbl">Name:</label>  <input type="text" name="usrname" class="field-long" id="userName" required>
+                        <input type="submit" value="SHARE" id="submitBtn" class="styleBMIbtn">
+                    </form>
+                    <br>
+                    <textarea id="storyText" rows="4" cols="50" name="story" form="storyForm" class="area" placeholder="Enter text here..." required></textarea>
                 </div>
-
-
-                <section class="sharedStoriesSection" id="sharedStoriesSection">
+                <article class="sharedStoriesSection" id="sharedStoriesSection">
 
                     <!-- DOM STORIES-->
+                </article>
                 </section>
+
+                            
 
 
 
@@ -95,8 +106,48 @@
 
     </main>
     <footer>
+
+        <section class="sections">
+            <div>
+
+
+                <form action="" id="subform">
+
+                    <h6>
+                        <input type="text" id="emailText" required placeholder="Enter your email">
+                        <input type="submit" value="SUBSCRIBE">
+                    </h6>
+                    <label id="alert"></label>
+                </form>
+
+
+                <h6> +962 6 585 7777 | info@health-coaching.com</h6>
+
+                <h6>&copy; 2021 Health Coaching - All Rights Reserved.</h6>
+            </div>
+
+            <div id="socialmedia">
+
+                <nav>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+
+                </nav>
+
+
+            </div>
+
+
+
+        </section>
     </footer>
     <script src="../js/therapy.js"></script>
+    <script src="../js/home.js"></script>
+</body>
 </body>
 
 </html>

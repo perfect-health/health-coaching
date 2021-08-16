@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  font-family:Paytone One;
+  
+}
+
+/*********************************************/
+
+/* .therapyPage {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: auto;
+    height: auto;
+} */
+
+.imageSection {
+    /*width: 100%;*/
+    height: 200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 1120px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 300px;
+   
+  
+}
+
+/* .beforeSection, .afterSection{
+    padding: 55px 55px;
+    margin-left: 55px;
+    margin-right: 20px;
+        align-items: center;
+    justify-content: space-between;
+
+} */
+
+#beforeImage {
+
+    width: 300px ;
+    height: 250px;
+    border: 5px solid #00C1D4;
+    margin-left: 180px;
+
+}
+#afterImage{
+    width: 300px ;
+    height: 250px;
+    border: 5px solid #00C1D4;
+   
+
+
+}
+
+
+
+.motivationStorySection{
+    display: grid;
+    grid-template-columns: 650px auto;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.4em;
+    color: #404040;
+    
+    width: 1380px;
+    height: 700px;
+   
+
+}
+
+.sharedStoriesSection{
+    
+     background-image:url('../img/imgTherapy/sq-Digital-Marketing-Examples.jpg') ; 
+    background-repeat: no-repeat;
+    background-size: contain; 
+    overflow: scroll;
+    width: 470px;
+    height: 630px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: #F3F2C9;
+     
+}
+
+#successimg{
+    margin-bottom: 60px;
+  
+}
+
+h5 {
+    font-family:Paytone One;
+    font-weight: 100;
+    font-size: 80px;
+    /* letter-spacing: -5px;
+    line-height: 0.9;*/
+    margin-left: 0px; 
+    color: #00C1D4;
+
+}
+.hover02 figure img {
+	width: 300px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover02 figure:hover img {
+	width: 350px;
+}
+h3 span{
+    color: #00C1D4;
+    font-family:Paytone One;
+   
+
+}
+#after{
+margin-left: 100px;
+}
+#before{
+    margin-left: 270px;
+}
+
+fieldset{
+    width: 1100px;
+    margin-left: 130px;
+    
+    
+}
+#storydiv{
+    margin-left: 100px;
+}
+
