@@ -6,70 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="../css/chartPage.css">
+    <!-- <link rel="stylesheet" href="../css/home.css"> -->
     <title>Health Coaching</title>
 </head>
 
 <body>
-    <header>
-        <section>
-            <img src="https://via.placeholder.com/150x150/000000" alt="hcLogo">
-            <h1>Healthy Coaching Website</h1>
+    <header> 
+       
+        <section id="headersec">
+            <div><a href="index.html"><img src="../img/Home/logo1.jpg" alt="hcLogo" id="logo"></a>
+                <h1 class="shimmer">Healthy Coaching</h1>
+            </div>
+            <div id="menue">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="../html/page2new.html">Healthy Tips</a></li>
+                        <li><a href="../html/service.html">Service Provider</a></li>
+                        <li><a href="../html/therapy.html">Therapy Group</a></li>
+                        <li><a href="../html/exam.html">Quiz</a></li>
+                        <li><a href="../html/chart.html">statistics</a></li>
+                    </ul>
+                </nav>
+
+            </div>
         </section>
-        <section>
-            <nav>
-                <a href="">Healthy Tips</a>
-            </nav>
-        </section>
+
     </header>
-    <main>
-           
+    <main> 
+         <h3 id='h1'>Your Mesurments</h3>  
         <section id="measurments">
-            <h3>Your Mesurments</h3>
+           
             <ul id="ul"></ul>
         </section>
         <section id="chart">
-            <canvas id= "myChart"
+           
+            <h3>Our clients measurments statistics</h3>
+             <canvas id= "myChart"
             width="400"
             height="400"></canvas>
-            <h3>Our clients measurments statistics</h3>
             <button type="button" id="button">Show-Chart</button>
         </section>  
     </main>
     <footer>
-       
-        <section id="subscribe">
-            <h1>SUBSCRIBE TO THE MAILING LIST & STAY CONNECTED</h1>
-            <form action="">
-                <label for="firstNameText">First Name*</label>
-                <input type="text" id="firstNameText" required>
-                <label for="lastNameText">Last Name*</label>
-                <input type="text" id="lastNameText" required>
-                <label for="emailText">Email Address*</label>
-                <input type="text" id="emailText" required>
-                <input type="submit" value="SUBSCRIBE">
-            </form>
-        </section>
 
-        <section class="sections" >
-            <div>
-                <h5> +962 6 585 7187 | info@health-coaching.com</h5>
+       
+
+        <section class="sections">
+            <div >
+                <section id="subscribe">
+                    
+                    <form action="" id="subform">
+                      
+                        <h6>
+                        <input type="text" id="emailText" required placeholder="Enter your email">
+                        <input type="submit" value="SUBSCRIBE" ></h6>
+                        <label id="alert"></label>
+                    </form>
+                </section>
+                
+                <h6> +962 6 585 7777 | info@health-coaching.com</h6>
+              
                 <h6>&copy; 2021 Health Coaching - All Rights Reserved.</h6>
             </div>
 
-            <nav>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="FB"></a>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="linkedin"></a>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="twitter"></a>
-                <a href=""></a><img src="https://via.placeholder.com/20x20/000000" alt="youtube"></a>
-            </nav>
+            <div id="socialmedia">
+               
+                <nav>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+    
+                </nav>
+                
+
+            </div>
+
+            
 
         </section>
 
     </footer>
+    <script src="../js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
     <script src="../js/appBMI.js"></script>
     <script src="../js/appStatistic.js"></script>
 </body>
-
 </html>

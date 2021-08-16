@@ -1,0 +1,52 @@
+
+body{
+    font-family:Paytone One;
+  }
+  #h1{
+    font-family:Paytone One;
+      padding-left: 0.5cm;
+  }
+#measurments{
+    font-family:Paytone One;
+    margin: 20px;
+    width: 40%;
+    border: 10px solid #00C1D4;
+    padding: 20px;
+}
+
+#ul{
+    font-family:Paytone One;
+
+}
+
+#chart{
+    font-family:Paytone One;
+   position: relative;
+   top: -5.5cm;
+   left: 22cm;
+    width: 15cm;
+    height: 15cm;
+   
+
+}
+
+#myChart{
+    width: 15cm;
+    height: 10cm; 
+    border: 10px solid #00FFCB;
+}
+
+#button{
+    font-family:Paytone One;
+    border: none;
+  color: #00C1D4;
+  width:15cm;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
