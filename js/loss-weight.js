@@ -88,7 +88,7 @@ function showUser() {
   }
 }   
 
-  userInfo.saveToLocalStorage()
+  userInfo.saveToLocalStorage();
   
 renderUser();
 
