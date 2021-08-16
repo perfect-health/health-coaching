@@ -252,3 +252,7 @@ overflow: scroll;
   right: -20px;
   transition: 0.5s;
 }
+
+a {
+  color: hotpink;
+  font-size: large;}
