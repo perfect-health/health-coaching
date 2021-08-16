@@ -1,6 +1,5 @@
 body{
     width: 960px;
-         background-color: #faefef;
 }
 
 h1{
@@ -8,7 +7,7 @@ h1{
     font-size: 50px;
     margin: 20px;
     text-align: center;
-    color: #625757;
+    color: #00C1D4;
     text-transform: uppercase;
     padding: 20px;
     font-weight: bold;
@@ -20,7 +19,7 @@ h3{
     font-size: 30px;
     margin: 20px;
     padding: 10px;
-    color: #5c5858;
+    color: #787A91;
 
     text-transform: capitalize;
 
