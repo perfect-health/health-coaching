@@ -46,54 +46,67 @@ function clicHandler(event) {
     }
 }
 
-getData();
-
 const table = document.getElementById('userInfo');
 
-let userInfo;
+let userInfo=getData();
 let tbody = document.querySelector('tbody')
   let c ;
-function loaduser() {
-  const userItems = JSON.parse(localStorage.getData('userInfo')) || [];
-  userInfo = new userInfo(user);
-  console.log(userInfo)
-}
+// function loaduser() {
+//   const userInfo = JSON.parse(localStorage.getData('userInfo')) || [];
+//   userInfo = new userInfo(user);
+//   console.log(userInfo)
+// }
 
 
 function renderUser() {
-  loadUser();
+ 
   showUser();
 }
 
 function showUser() {
   
-  for (let i= 0 ;i< cart.items.length ;i++){
+  for (let i= 0 ;i<userInfo.length ;i++){
   
   let tr = document.createElement('tr')
-  tr.id = "row"+j
+  tr.id = "row"+i;
   tbody.appendChild(tr)
-  
-  let td= document.createElement('td')
-  td.textContent =`remove `
-  td.id ="delete"+i
-  tr.appendChild(td)
-  rem.push(td.id)
+
     let td1= document.createElement('td')
-    td1.textContent =cart.items[i].product
-    
+    td1.textContent =userInfo[0].firstName;
     tr.appendChild(td1)
+
     let td2= document.createElement('td')
-    td2.textContent =cart.items[i].quantity
-    tr.appendChild(td2)
+    td2.textContent =userInfo[0].lastName;
+    tr.appendChild(td2);
+   
+    let td3= document.createElement('td')
+    td3.textContent =userInfo[0].gender;
+    tr.appendChild(td3);
+
+    let td4= document.createElement('td')
+    td4.textContent =userInfo[0].weight;
+    tr.appendChild(td4);
+
+    let td5= document.createElement('td')
+    td5.textContent =userInfo[0].height;
+    tr.appendChild(td5);
   }
 }   
 
-  userInfo.saveToLocalStorage()
+  // userInfo.saveToLocalStorage();
   
 renderUser();
+localStorage.removeItem("userInfo"); 
+window.localStorage.clear();
 
-function removeItem(){  //deletes item from localStorage
-    var key = document.getElementById('removeKey').value;
-    localStorage.removeItem(key)
-    console.log("remove items");
-}
+
+
+let backButton=document.getElementById('back')
+button.addEventListener('click', submitHandler)
+function submitHandler(event) {
+  event.preventDefault();
+  console.log(event)
+  // backBtn.setAttribute('click', "window.open('../html/journey.html')")
+  window.location.replace("../html/journey.html");
+
+};

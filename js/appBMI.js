@@ -116,7 +116,7 @@ user.prototype.checkBMIresult = function(){
         let gainweightBtn = document.createElement('input');
         gainweightBtn.setAttribute('type', 'button');
         gainweightBtn.setAttribute('value' , "Safe Gain Weight");
-        gainweightBtn.setAttribute('onclick' , "window.open('../html/gain-weight.html')");
+        gainweightBtn.setAttribute('onclick' , "window.open('../html/gain-wieght.html')");
         resultSec.appendChild(gainweightBtn);
 
 
