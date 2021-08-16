@@ -77,7 +77,7 @@ function showStory(){
   let articleElement = document.createElement('article');
     storiesProfile.appendChild(articleElement);
 
-
+    storiesProfile.textContent = ' ';
     let h1Element = document.createElement('h1');
     h1Element.textContent = 'MOTIVATION STORIES!';
     articleElement.appendChild(h1Element);
@@ -87,30 +87,32 @@ function showStory(){
     storiesProfile.appendChild(secElement);
 
   
+  if(storedData){
     for(let i=0; i < storedData.length; i++){
 
-    let userElement = document.createElement('h1');
-    userElement.textContent = i+1;
-    userElement.style.color = 'blue';
-    
-    secElement.appendChild(userElement);
-
-    let userNameElement = document.createElement('h3');
-    
-    userNameElement.textContent = storedData[i].userName.toUpperCase();
-    secElement.appendChild(userNameElement);
-    
-
-    let storyElement = document.createElement('p');
-    storyElement.textContent =  storedData[i].userStory;
-    secElement.appendChild(storyElement);
-
-     
-    }
+      let userElement = document.createElement('h1');
+      userElement.textContent = i+1;
+      userElement.style.color = 'blue';
+      
+      secElement.appendChild(userElement);
+  
+      let userNameElement = document.createElement('h3');
+      
+      userNameElement.textContent = storedData[i].userName.toUpperCase();
+      secElement.appendChild(userNameElement);
+      
+  
+      let storyElement = document.createElement('p');
+      storyElement.textContent =  storedData[i].userStory;
+      secElement.appendChild(storyElement);
+  
+       
+      }
+  }
 }
 
-showStory();
 
+showStory();
 storyForm.addEventListener('submit', submitHandler);
 
 function submitHandler(event) {
@@ -118,9 +120,9 @@ function submitHandler(event) {
     let userName = event.target.userName.value;
     let userStory = event.target.storyText.value;
       console.log(userStory);
-      new story(userName, userStory)
+      new story(userName, userStory);
       localStorage.storyData = JSON.stringify(story.allStories); 
-
+      showStory();
               console.log(story.allStories);
 
       /* submission time 
@@ -138,6 +140,7 @@ function submitHandler(event) {
 function getData(){
   if(localStorage.storyData){
   let storyData = JSON.parse(localStorage.storyData);
+  console.log(storyData);
    story.allStories = storyData;
    return storyData;
   }
