@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+body{
+    font-family:Paytone One;
+    color: #333;
+  }
+  
+  header{
+      display: grid;
+      grid-template-columns: 500px auto;
+      width: 1500px;
+      margin-left: 60px;
+      margin-bottom: 30px;
+  }
+  
+  
+  footer{
+      width: 1500px;
+      margin-left: 60px;
+      margin-bottom: 30px;
+  }
+  .heroSection{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+  .defineSection{
+    display: grid;
+    grid-template-columns: 600px 1fr;
+
+  }
+  .userFormSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+  .imgForm{
+      width: 300px;
+      hight:300px;
+  }
+  .section{
+      margin-top: 60px;
+  }
+.bmiClculatorImgswing{
+    width:600px;
+    hight:600px;
+}
+fieldset {
+    /* background-color: #eeeeee; */
+  }
+  legend {
+ 
+    padding: 5px 10px;
+  }
+  
+  input {
+    margin: 5px;
+  }
+  h1 span{
+    font-family:Paytone One;
+    font-weight: 700;
+    font-size: 100px;
+    /* letter-spacing: -5px;
+    line-height: 0.9;*/
+    margin-left: 0px; 
+    color: #00C1D4;
+
+}
+#middle{
+    padding-top: 80px;
+    padding-right: 40px;
+}
+#slide{
+    padding-top: 100px;
+}
+.swing{
+    padding-left: 200px;
+    padding-top: 35px;
+}
+.formspan{
+    padding-left: 8px;
+}
+.formspan1{
+    padding-left: 20px;
+}
+.styleBMIbtn{
+    margin-left: 550px  
+}
+h6{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.4em;
+    color: #404040;
+  }
+  
