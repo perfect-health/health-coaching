@@ -25,9 +25,9 @@ let imgAfterArray = [
 ];
 
 
+
 let beforeImage = document.getElementById('beforeImage');
 let afterImage = document.getElementById('afterImage');
-
 
 /*function imgStory(story, imgBeforeArray, imgAfterArray) {
   this.story = story;
@@ -39,12 +39,14 @@ let afterImage = document.getElementById('afterImage');
  function showImgs() {
 
   for (let i = 0; i < imgBeforeArray.length; i++) {
+    //img/imgTherapy/story1-after.png
+    console.log( `../img/imgTherapy/${imgBeforeArray[i]}`);
 
-    beforeImage.src = '../img/imgTherapy/' + imgBeforeArray[i];
+    beforeImage.setAttribute( 'src' , `../img/imgTherapy/${imgBeforeArray[i]}`);
 
-    afterImage.src = '../img/imgTherapy/' + imgAfterArray[i];
+    afterImage.src = `../img/imgTherapy/${imgAfterArray[i]}`;
   }
-  setTimeout( showImgs , 200); // 3sec
+  setTimeout( 'showImgs' , 2000); // 3sec
 
 };
 
@@ -55,7 +57,9 @@ window.onload = function(){
 };
 
 const storyForm =  document.getElementById('storyForm');
+storyForm.style.marginLeft = '70px';
 let storiesProfile = document.getElementById('sharedStoriesSection');
+storiesProfile.style.marginLeft = '70px';
 
 function story(userName, userStory){
   this.userName = userName;
@@ -67,7 +71,7 @@ function story(userName, userStory){
 story.allStories = [];
 
 
-getData();
+let storedData = getData();
 
 function showStory(){
   let articleElement = document.createElement('article');
@@ -78,26 +82,34 @@ function showStory(){
     h1Element.textContent = 'MOTIVATION STORIES!';
     articleElement.appendChild(h1Element);
 
-    let ulElement = document.createElement('ul');
-    storiesProfile.appendChild(ulElement);
+    let secElement = document.createElement('section');
+    secElement.style.marginLeft = '55px';
+    storiesProfile.appendChild(secElement);
 
   
-    for(let i=0; i < localStorage.storyData.length; i++){
+    for(let i=0; i < storedData.length; i++){
 
-    let userElement = document.createElement('li');
-    userElement.textContent = story.allStories[i].userName.toUpperCase();
-    ulElement.appendChild(userElement);
+    let userElement = document.createElement('h1');
+    userElement.textContent = i+1;
+    userElement.style.color = 'blue';
+    
+    secElement.appendChild(userElement);
 
-    let storyLiElement = document.createElement('li');
-    storyLiElement.textContent = story.allStories[i].userStory;
-        ulElement.appendChild(storyLiElement);
-    }
-
+    let userNameElement = document.createElement('h3');
+    
+    userNameElement.textContent = storedData[i].userName.toUpperCase();
+    secElement.appendChild(userNameElement);
     
 
+    let storyElement = document.createElement('p');
+    storyElement.textContent =  storedData[i].userStory;
+    secElement.appendChild(storyElement);
 
+     
+    }
 }
 
+showStory();
 
 storyForm.addEventListener('submit', submitHandler);
 
@@ -109,8 +121,7 @@ function submitHandler(event) {
       new story(userName, userStory)
       localStorage.storyData = JSON.stringify(story.allStories); 
 
-         showStory();
-     console.log(story.allStories);
+              console.log(story.allStories);
 
       /* submission time 
       document.ready(function(){
@@ -128,4 +139,6 @@ function getData(){
   if(localStorage.storyData){
   let storyData = JSON.parse(localStorage.storyData);
    story.allStories = storyData;
-  }}
+   return storyData;
+  }
+}
