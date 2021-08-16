@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
-    width: 960px;
+    width: 1400px;
+    font-family:Paytone One;
+    color: #787A91;
 }
-h1{
+main{
+    width: 1400px;
+    
+    background-image:url('../img/Home/buzz.jpg') ; 
+    background-repeat:repeat;
+    background-size:contain; 
+    align-items: center;
+  
+}
+/* h1{
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
     margin: 20px;
@@ -13,8 +27,8 @@ h1{
     position: absolute;
     top: 10px;
     left: 50px;
-}
-button{
+} */
+/* button{
     position: relative;
             left: 50px;}
             .think{
@@ -41,32 +55,36 @@ button{
                 0% { transform: translateY(0); }
                 100% { transform: translateY(-20px); }
             }
-            
-            .think2:hover {
+             */
+            /* .think2:hover {
                 display: inline-block;
                 margin: 0 0.9rem;
               
-                animation: bounce; /* referring directly to the animation's @keyframe declaration */
-                animation-duration: 3s; /* don't forget to set a duration! */
-              }
+                animation: bounce; 
+                animation-duration: 3s;
+            } */
             
               fieldset{
-                padding: 20px;
+                /* padding: 20px;
            border-radius: 20px;
            margin: 20px;  
-           border:outset;  }
+           border:outset;  */
+          
+         }
             label{
                 display: block;
-                font-family: 'Caveat', cursive;
+                font-family:Paytone One;
+                /* font-family: 'Caveat', cursive;
                 font-family: 'Indie Flower', cursive;
-                font-family: 'Patrick Hand', cursive;
-                font-size: 25px;
+                font-family: 'Patrick Hand', cursive; */
+                font-size: 20px;
                 line-height: 59px;
+                color: #787A91;
            
             }
             legend{
               
-               font-family: 'Indie Flower', cursive;
+               /* font-family: 'Indie Flower', cursive; */
                font-size: 40px;
                color: #00C1D4;
             }
@@ -79,24 +97,38 @@ button{
                 display: inline-block;
                 margin-right: 20px;}
            
-                
+/*                 
                span:hover{
                    font-size: 30px;
                    color: rgb(243, 202, 18);
                    cursor: pointer;
            
-               }
+               } */
               
                fieldset {
-                   position: relative;
+                width: fit-content;
+                background-color:#EEEEEE;
+              
+               
+                   /* position: relative;
                    top: 200px;
                    left: 10px;
-                   border: auto;
+                   border: auto; */
                    
-               }
-               form{
+               } 
+               /* form{
                    margin: 10px;
                    padding: 10px;
                    color: #787A91;
+                
            
+               } */
+               .formsection{
+                width: fit-content;
+                background-color:#EEEEEE;
+
                }
+               #divbtn{
+                   margin-left: 430px;
+               }
+               
