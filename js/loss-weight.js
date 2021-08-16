@@ -46,50 +46,54 @@ function clicHandler(event) {
     }
 }
 
+getData();
 
-let table = document.getElementById('userInfo');
+const table = document.getElementById('userInfo');
 
-let user;
-let tbody = document.querySelector('tbody');
-let c
+let userInfo;
+let tbody = document.querySelector('tbody')
+  let c ;
+function loaduser() {
+  const userItems = JSON.parse(localStorage.getData('userInfo')) || [];
+  userInfo = new userInfo(user);
+  console.log(userInfo)
+}
 
-function loadUser() {
-       let userItems = JSON.parse(localStorage.getItem('user')) || [];
-  user = new Cart(userItems);
-console.log(user) }
 
 function renderUser() {
-    loaduser();
-   showUser();
- }
+  loadUser();
+  showUser();
+}
 
+function showUser() {
+  
+  for (let i= 0 ;i< cart.items.length ;i++){
+  
+  let tr = document.createElement('tr')
+  tr.id = "row"+j
+  tbody.appendChild(tr)
+  
+  let td= document.createElement('td')
+  td.textContent =`remove `
+  td.id ="delete"+i
+  tr.appendChild(td)
+  rem.push(td.id)
+    let td1= document.createElement('td')
+    td1.textContent =cart.items[i].product
+    
+    tr.appendChild(td1)
+    let td2= document.createElement('td')
+    td2.textContent =cart.items[i].quantity
+    tr.appendChild(td2)
+  }
+}   
 
- function showUser() {
-       
-  for (let i = 0; i < user.items.length; i++) {
-// let tr = document.getElementsByTagName('tr');
- let tr = document.createElement('tr');
- tr.id='row'+i;
- tbody.appendChild(tr);
- tr.setAttribute('id', i);
-     tbody.appendChild(tr);
+  userInfo.saveToLocalStorage()
+  
+renderUser();
 
-  let td = document.createElement('td');
- td.textContent = user.items[i].name;
-     tr.appendChild(td);
-
-  let weight = document.createElement('td');
-     weight.textContent = user.items[i].weight;
-    tr.appendChild(weight);
-
-   let gender = document.createElement('td');
-   gender.textContent = user.items[i].product;
-      tr.appendChild(gender);
-   }
- }
-
-// // Save the cart back to local storage
- localStorage.setItem('user', JSON.stringify(user.items));
- renderUser();
-
-
+function removeItem(){  //deletes item from localStorage
+    var key = document.getElementById('removeKey').value;
+    localStorage.removeItem(key)
+    console.log("remove items");
+}
