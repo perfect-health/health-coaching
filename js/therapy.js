@@ -25,42 +25,107 @@ let imgAfterArray = [
 ];
 
 
-const imageSection = document.getElementById('imageSection');
 let beforeImage = document.getElementById('beforeImage');
 let afterImage = document.getElementById('afterImage');
 
 
-function imgStory(story, imageSrc) {
+/*function imgStory(story, imgBeforeArray, imgAfterArray) {
   this.story = story;
-  this.image = imageSrc;
-  };
-
-imgStory.all = [];
-
-
-console.log(imgStory.all);
+  this.beforeImageSrc = imgBeforeArray;
+  this.afterImageSrc = imgAfterArray;
+  };*/
 
 
- function render() {
+ function showImgs() {
 
   for (let i = 0; i < imgBeforeArray.length; i++) {
 
-    beforeImage.src = '../img/imgTherapy/' + this.image;
+    beforeImage.src = '../img/imgTherapy/' + imgBeforeArray[i];
 
-    afterImage.src = '../img/imgTherapy/' + this.image;
+    afterImage.src = '../img/imgTherapy/' + imgAfterArray[i];
   }
-
+  setTimeout( showImgs , 200); // 3sec
 
 };
 
-this.render();
 
-imageSection.addEventListener('click', clickHandler);
-function clickHandler(e) {
-  if ((e.target.id === 'beforeImage' || e.target.id === 'afterImage')) {
-    this.render();
 
-  }
+window.onload = function(){
+  showImgs();
+};
+
+const storyForm =  document.getElementById('storyForm');
+let storiesProfile = document.getElementById('sharedStoriesSection');
+
+function story(userName, userStory){
+  this.userName = userName;
+  this.userStory = userStory;
+  story.allStories.push(this);
+ 
+};
+
+story.allStories = [];
+
+
+getData();
+
+function showStory(){
+  let articleElement = document.createElement('article');
+    storiesProfile.appendChild(articleElement);
+
+
+    let h1Element = document.createElement('h1');
+    h1Element.textContent = 'MOTIVATION STORIES!';
+    articleElement.appendChild(h1Element);
+
+    let ulElement = document.createElement('ul');
+    storiesProfile.appendChild(ulElement);
+
+  
+    for(let i=0; i < localStorage.storyData.length; i++){
+
+    let userElement = document.createElement('li');
+    userElement.textContent = story.allStories[i].userName.toUpperCase();
+    ulElement.appendChild(userElement);
+
+    let storyLiElement = document.createElement('li');
+    storyLiElement.textContent = story.allStories[i].userStory;
+        ulElement.appendChild(storyLiElement);
+    }
+
+    
+
 
 }
 
+
+storyForm.addEventListener('submit', submitHandler);
+
+function submitHandler(event) {
+    event.preventDefault();
+    let userName = event.target.userName.value;
+    let userStory = event.target.storyText.value;
+      console.log(userStory);
+      new story(userName, userStory)
+      localStorage.storyData = JSON.stringify(story.allStories); 
+
+         showStory();
+     console.log(story.allStories);
+
+      /* submission time 
+      document.ready(function(){
+        storyForm.submit(function(){
+            var text = document.getElementsByName('text')[0].value;
+            var action = storyForm.action;
+            action = action+"?date=" + new Date();
+            alert(action);
+        });
+    });*/
+   
+      
+}
+function getData(){
+  if(localStorage.storyData){
+  let storyData = JSON.parse(localStorage.storyData);
+   story.allStories = storyData;
+  }}
