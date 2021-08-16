@@ -113,11 +113,11 @@ user.prototype.checkBMIresult = function(){
     resultSec.appendChild(h1stElement);
 
 
-        let gainweightBtn = document.createElement('input');
-        gainweightBtn.setAttribute('type', 'button');
-        gainweightBtn.setAttribute('value' , "Safe Gain Weight");
-        gainweightBtn.setAttribute('onclick' , "window.open('../html/gain-weight.html')");
-        resultSec.appendChild(gainweightBtn);
+    let gainweightBtn = document.createElement('input');
+    gainweightBtn.setAttribute('type', 'button');
+    gainweightBtn.setAttribute('value' , "Safe Gain Weight");
+    gainweightBtn.setAttribute('onclick' , "window.open('../html/gain-weight.html')");
+    resultSec.appendChild(gainweightBtn);
 
 
   }else if(this.valueBMI.toFixed(1) > 18.5 && this.valueBMI.toFixed(1) < 24.9){
@@ -129,11 +129,11 @@ user.prototype.checkBMIresult = function(){
     resultSec.appendChild(h2ndElement);
 
 
-        let healthyTipsBtn = document.createElement('input');
-        healthyTipsBtn.setAttribute('type' , 'button');
-        healthyTipsBtn.setAttribute('value' , "healthy Tips");
-        healthyTipsBtn.setAttribute('onclick' ," window.open('../html/page2new.html')");
-        resultSec.appendChild(healthyTipsBtn);
+    let healthyTipsBtn = document.createElement('input');
+    healthyTipsBtn.setAttribute('type' , 'button');
+    healthyTipsBtn.setAttribute('value' , "healthy Tips");
+    healthyTipsBtn.setAttribute('onclick' ," window.open('../html/page2new.html')");
+    resultSec.appendChild(healthyTipsBtn);
 
 
   }else if(this.valueBMI.toFixed(1) > 25 && this.valueBMI.toFixed(1) < 29.9){
@@ -143,24 +143,24 @@ user.prototype.checkBMIresult = function(){
     h3rdElement.textContent = " Understanding your BMI result: <br> You're in OverWeight. <br> The best way to lose weight is through a combination of diet and exercise. for find the best plan press this button ";
     resultSec.appendChild(h3rdElement);
 
-        let overWeightBtn = document.createElement('input');
-        overWeightBtn.setAttribute('type','button');
-        overWeightBtn.setAttribute('value' , "Weight Loss Support");
-         overWeightBtn.setAttribute('onclick' , "window.open('../html/loss-wieght.html')");
-        resultSec.appendChild(overWeightBtn);
+    let overWeightBtn = document.createElement('input');
+    overWeightBtn.setAttribute('type','button');
+    overWeightBtn.setAttribute('value' , "Weight Loss Support");
+    overWeightBtn.setAttribute('onclick' , "window.open('../html/loss-wieght.html')");
+    resultSec.appendChild(overWeightBtn);
 
-    } else {
-        console.log('grater than 30');
+  } else {
+    console.log('grater than 30');
         
-        let h3rdElement = document.createElement('h3');
-        h3rdElement.textContent = " Understanding your BMI result: <br> You're in OverWeight. <br> The best way to lose weight is through a combination of diet and exercise. for find the best plan press this button ";
-        resultSec.appendChild(h3rdElement);
+    let h3rdElement = document.createElement('h3');
+    h3rdElement.textContent = " Understanding your BMI result: <br> You're in OverWeight. <br> The best way to lose weight is through a combination of diet and exercise. for find the best plan press this button ";
+    resultSec.appendChild(h3rdElement);
 
-        let overWeightBtn = document.createElement('input');
-        overWeightBtn.setAttribute('type','button');
-        overWeightBtn.setAttribute('value' , "Weight Loss Support");
-         overWeightBtn.setAttribute('onclick' , "window.open('../html/loss-wieght.html')");
-        resultSec.appendChild(overWeightBtn);
+    let overWeightBtn = document.createElement('input');
+    overWeightBtn.setAttribute('type','button');
+    overWeightBtn.setAttribute('value' , "Weight Loss Support");
+    overWeightBtn.setAttribute('onclick' , "window.open('../html/loss-wieght.html')");
+    resultSec.appendChild(overWeightBtn);
 
 
 
