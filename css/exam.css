@@ -1,12 +1,11 @@
 body{
     width: 960px;
-         background-color: #faefef;
 }
 h1{
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
     margin: 20px;
-    color: #625757;
+    color: #00C1D4;
     text-transform: uppercase;
     padding: 20px;
     font-weight:bolder;
@@ -69,7 +68,7 @@ button{
               
                font-family: 'Indie Flower', cursive;
                font-size: 40px;
-               color: #464141;
+               color: #00C1D4;
             }
             span{
                 margin-right: 20px;
@@ -98,6 +97,6 @@ button{
                form{
                    margin: 10px;
                    padding: 10px;
-                   color: #3d3a3a;
+                   color: #787A91;
            
                }
