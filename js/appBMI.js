@@ -130,7 +130,7 @@ user.prototype.checkBMIresult = function () {
     let healthyTipsBtn = document.createElement('input');
     healthyTipsBtn.setAttribute('type', 'button');
     healthyTipsBtn.setAttribute('value', 'healthy Tips');
-    healthyTipsBtn.setAttribute('onclick', ' window.open(\'../index.html\')');
+    healthyTipsBtn.setAttribute('onclick', ' window.open(\'../html/page2new.html\')');
     resultSec.appendChild(healthyTipsBtn);
 
   } else if (this.valueBMI.toFixed(1) > 25 && this.valueBMI.toFixed(1) < 29.9) {
