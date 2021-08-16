@@ -32,40 +32,31 @@ console.log(user.allUsers);
 
 
 user.prototype.calculateBMI = function (weight, height) {
-  /*      Formula: weight (kg) / [height (m)]2
-
-         The formula for BMI is weight in kilograms divided by height in meters squared.
-      If height has been measured in centimeters, divide by 100 to convert this to meters. */
+  
 
   let heightinMeter = height / 100;
   this.valueBMI = Number(weight / Math.pow(heightinMeter, 2));
-  return this.valueBMI;
+  return Math.floor(this.valueBMI);
 };
 
 user.prototype.render = function () {
+  userProfile.innerHTML = '';
 
   let articleElement = document.createElement('article');
   userProfile.appendChild(articleElement);
 
 
-  let h1Element = document.createElement('h1');
+  let h1Element = document.createElement('h3');
   h1Element.textContent = 'Your BMI Result!';
   articleElement.appendChild(h1Element);
 
-  /*
-    BMI Categories:
-          Underweight = <18.5
-          Normal weight = 18.5–24.9
-          Overweight = 25–29.9
-          Obesity = BMI of 30 or greater
+  
 
-    */
-
-  let h2Element = document.createElement('h2');
-  h2Element.textContent = `Hello ${this.firstName.toUpperCase()} . Your BMI is ${this.valueBMI}`;
+  let h2Element = document.createElement('h3');
+  h2Element.textContent = `Hello ${this.firstName.toUpperCase()} ! Your BMI is ${Math.floor(this.valueBMI)}`;
   articleElement.appendChild(h2Element);
 
-  let h6Element = document.createElement('h5');
+  let h6Element = document.createElement('h3');
   h6Element.textContent = 'What Next? Take Action Towards Better Health! You can use your BMI result as a starting point for a healthy lifestyle.';
   articleElement.appendChild(h6Element);
 
@@ -101,7 +92,7 @@ function submitHandler(event) {
 }
 
 user.prototype.checkBMIresult = function () {
-
+  resultSec.innerHTML = '';
   console.log('hi form check');
   console.log(typeof this.valueBMI.toFixed(1));
 
@@ -124,21 +115,28 @@ user.prototype.checkBMIresult = function () {
     console.log('2ndCondition');
 
     let h2ndElement = document.createElement('h3');
-    h2ndElement.textContent = ' Understanding your BMI result:congradulation! You\'re in Normal Weight.Keep up the good work! For tips on maintaining a healthy weight, check out our healthly Tips Page';
+    h2ndElement.textContent = ' Understanding your BMI result:congradulation! You\'re in Normal Weight.Keep up the good work! For tips on maintaining ';
     resultSec.appendChild(h2ndElement);
+    let h2ndElement2 = document.createElement('h3');
+    h2ndElement2.textContent = 'a healthy weight, check out our healthly Tips Page.';
+    resultSec.appendChild(h2ndElement2);
 
     let healthyTipsBtn = document.createElement('input');
     healthyTipsBtn.setAttribute('type', 'button');
-    healthyTipsBtn.setAttribute('value', 'healthy Tips');
-    healthyTipsBtn.setAttribute('onclick', ' window.open(\'../index.html\')');
+    healthyTipsBtn.setAttribute('value', 'Healthy Tips');
+    healthyTipsBtn.setAttribute('onclick', ' window.open(\'../html/page2new.html\')');
     resultSec.appendChild(healthyTipsBtn);
 
   } else if (this.valueBMI.toFixed(1) > 25 && this.valueBMI.toFixed(1) < 29.9) {
     console.log('3rdCondition');
 
     let h3rdElement = document.createElement('h3');
-    h3rdElement.textContent = ' Understanding your BMI result: You\'re in OverWeight.The best way to lose weight is through a combination of diet and exercise. for find the best plan press this button ';
+    h3rdElement.textContent = ' Understanding your BMI result: You\'re in OverWeight.The best way to lose weight is through a combination of diet and exercise.';
     resultSec.appendChild(h3rdElement);
+    let h3rdElement1 = document.createElement('h3');
+    h3rdElement1.textContent = 'for find the best plan press this button. ';
+    resultSec.appendChild(h3rdElement1);
+
 
     let overWeightBtn = document.createElement('input');
     overWeightBtn.setAttribute('type', 'button');
