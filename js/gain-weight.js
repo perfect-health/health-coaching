@@ -31,7 +31,7 @@ function random(min, max) {
 
 function render() {
     let imgRandom = random(0, planArray.length - 1);
-    planImg.src = './gain-wieght-media/gain-plan' + show.all[imgRandom].image;
+    planImg.src = '../img/gain-wieght-media/gain-plan/' + show.all[imgRandom].image;
     show.all[imgRandom].show++;
     console.log(show.all)
 }
@@ -47,14 +47,14 @@ function clicHandler(event) {
 }
 
 
-let getData;
+//  let getData;
 
 let table = document.getElementById('cart');
 
 let cart;
 
 function loadCart() {
-    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartItems = JSON.parse(localStorage.getData('cart')) || [];
     cart = new Cart(cartItems);
 }
 
