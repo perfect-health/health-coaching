@@ -92,8 +92,8 @@ function showUser() {
   
 renderUser();
 
-function removeItem(){  //deletes item from localStorage
-    var key = document.getElementById('removeKey').value;
-    localStorage.removeItem(key)
-    console.log("remove items");
-}
+// function removeItem(){  //deletes item from localStorage
+//     var key = document.getElementById('removeKey').value;
+//     localStorage.removeItem(key)
+//     console.log("remove items");
+// }
