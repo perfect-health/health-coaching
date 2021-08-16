@@ -46,9 +46,9 @@ user.prototype.render = function () {
   userProfile.appendChild(articleElement);
 
 
-  let h1Element = document.createElement('h3');
-  h1Element.textContent = 'Your BMI Result!';
-  articleElement.appendChild(h1Element);
+  // let h1Element = document.createElement('h3');
+  // h1Element.textContent = 'Your BMI Result!';
+  // articleElement.appendChild(h1Element);
 
   
 
