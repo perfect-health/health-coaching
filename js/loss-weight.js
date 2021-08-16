@@ -47,55 +47,49 @@ function clicHandler(event) {
 }
 
 
-let table = document.getElementById('cart');
+let table = document.getElementById('userInfo');
 
-let cart;
+let user;
 let tbody = document.querySelector('tbody');
 let c
 
-function loadCart() {
-       let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  cart = new Cart(cartItems);
-console.log(cart) }
+function loadUser() {
+       let userItems = JSON.parse(localStorage.getItem('user')) || [];
+  user = new Cart(userItems);
+console.log(user) }
 
-function renderCart() {
-    loadCart();
-   showCart();
+function renderUser() {
+    loaduser();
+   showUser();
  }
 
-// let cartTable = document.getElementById('cart');
-// let tbody = table.childNodes;
-// console.log(tbody[0].childNodes);
-// let nodes = tbody.firstChild;
 
-// for (var i = 0; i < cart.items.length; i++) {
-//     tbody.removeChild(tbody.firstChild);
-// }
-
- function showCart() {
-         let tr = document.getElementsByTagName('tr');
-  for (let i = 0; i < cart.items.length; i++) {
-
-  let tr = document.createElement('tr');
+ function showUser() {
+       
+  for (let i = 0; i < user.items.length; i++) {
+// let tr = document.getElementsByTagName('tr');
+ let tr = document.createElement('tr');
+ tr.id='row'+i;
+ tbody.appendChild(tr);
  tr.setAttribute('id', i);
      tbody.appendChild(tr);
 
   let td = document.createElement('td');
- td.textContent = cart.items[i].name;
+ td.textContent = user.items[i].name;
      tr.appendChild(td);
 
   let weight = document.createElement('td');
-     weight.textContent = cart.items[i].weight;
+     weight.textContent = user.items[i].weight;
     tr.appendChild(weight);
 
    let gender = document.createElement('td');
-   gender.textContent = cart.items[i].product;
+   gender.textContent = user.items[i].product;
       tr.appendChild(gender);
    }
  }
 
 // // Save the cart back to local storage
- localStorage.setItem('cart', JSON.stringify(cart.items));
- renderCart();
+ localStorage.setItem('user', JSON.stringify(user.items));
+ renderUser();
 
 
