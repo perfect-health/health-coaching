@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+body{
+    width: 960px;
+    
+}
+  
+h1{
+    color:#00C1D4 ;
+    font-family:Paytone One;
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: bold;
+    margin-left: 260px;
+
+}
+
+p{
+    font-size: 20px;
+     font-family: 'Caveat', cursive;
+     font-family: 'Courgette', cursive;
+     font-family: 'Indie Flower', cursive;
+     font-family: 'Patrick Hand', cursive;
+     line-height: 20px;
+     margin: 5px;
+     padding: 5px;
+     /* text-indent: 20px; */
+     /* box-sizing: 300px 700px; */
+     color: #787A91;
+}
+
+h3{
+    font-family: 'Caveat', cursive;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    margin: 10px;
+    padding: 5px;
+    color: #787A91;
+    text-transform: capitalize;
+}
+.par{
+    display: grid;
+    grid-template-columns: auto  auto auto;
+    gap: 100px;
+    margin-left: 200px;
+     padding-bottom: 50px;
+}
+
+.image{
+    display: grid;
+    grid-template-rows: 35%  35% 35%;
+    gap: 20px;
+    margin-left: 200px;
+     /* padding-bottom: 50px; */
+}
+img{
+    /* display: inline-block; */
+   width: 250px;
+   height: 200px;
+   border-radius: 20px;
+   /* display: block; */
+  /* margin: 10px; */
+   
+
+
+}
