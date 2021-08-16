@@ -25,6 +25,9 @@ let getq52 = document.getElementById('q52')
 button = document.querySelector('button')
 
 button.onclick = function(){
+    if (mark >0){
+        mark=0
+    }
 
 if (getq12.checked == true) {
     mark=mark+1
