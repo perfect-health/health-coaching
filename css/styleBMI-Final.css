@@ -3,6 +3,7 @@
 body{
     font-family:Paytone One;
     color: #333;
+   
   }
   
   header{
@@ -31,7 +32,11 @@ body{
   .userFormSection{
     display: grid;
     grid-template-columns: 1fr 1fr;
+       
 
+  }
+  #userform{
+    
   }
   .imgForm{
       width: 300px;
@@ -47,6 +52,9 @@ body{
 fieldset {
      background-color: #C1CFC0;
      width: fit-content;
+     background-image: url('../img/Home/footerimg.png');
+    background-repeat:repeat;
+    background-size:cover;
  
   }
   legend {
@@ -77,8 +85,8 @@ fieldset {
     padding-top: 100px;
 }
 .swing{
-    padding-left: 150px;
-    padding-top: 60px;
+    padding-left: 100px;
+    padding-top: 100px;
 }
 .formspan{
     padding-left: 22px;
@@ -87,11 +95,12 @@ fieldset {
     padding-left:13px;
 }
 .styleBMIbtn{
-    margin-left: 550px ;
+   /* margin-left: 550px ;*/
     /* border-radius: 50%;
     padding: 20px 20px; 
     background-color:#00C1D4 ;
     color: white; */
+    background-color: white;
 }
 h6{
     font-family: "Times New Roman", Times, serif;
@@ -104,4 +113,16 @@ h6{
       color: #141E61;
   }
 
+  #formart{
+    line-height: 1.5;
+    font-family:Paytone One;
+    font-weight: 100;
+    font-size: 25px;
+    /* letter-spacing: -5px;
+    line-height: 0.9;*/
+    
+    color:#00C1D4;
+
+  }
+  
  

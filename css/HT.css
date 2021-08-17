@@ -9,7 +9,7 @@ body{
 }
 footer{
     width: 1600px;
-   margin-left: 40px; 
+   margin-left: 60px; 
     margin-bottom: 30px;
     /* background-image: url('../img/Home/bk2.jpg');
   background-repeat:repeat;
@@ -18,18 +18,18 @@ footer{
 }
 main{
     width: 1500px;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-bottom: 30px;
 }
 #titleh1{
-    margin-left:40px;
+    margin-left:60px;
     margin-bottom: 30px;
 }
 
 header{
   
     width: 1500px;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-bottom: 30px;
   
   
@@ -44,14 +44,14 @@ header{
 .h4style{
     
     font-family:'Times New Roman', Times, serif;
-    margin-left: 40px;
+    margin-left: 60px;
    
      color:#787A91;
 
 }
 .h40style{
     font-family:'Times New Roman', Times, serif;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-right:120px;
    
      color:#787A91;
@@ -60,12 +60,12 @@ header{
 .h3style{
     font-family:'Times New Roman', Times, serif;
     color: blue;
-    margin-left: 40px;
+    margin-left: 60px;
    
 }
 span{
     font-family:'Times New Roman', Times, serif;
-    margin-left: 45px;
+    margin-left: 65px;
    
      color:#787A91; 
 }
@@ -75,7 +75,7 @@ span{
     font-weight: 100;
     font-size: 25px;
      color:#787A91;
-     margin-left: 40px;
+     margin-left: 60px;
 
 }
 .h20style{
@@ -231,7 +231,7 @@ animation-duration: 3s; /* don't forget to set a duration! */
 
 .formstyle{
     width: fit-content;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 #vedio{
@@ -242,7 +242,8 @@ padding-left: 0px;
 
 }
 #recsec{
-    margin-left: 40px;
+    margin-left: 60px;
 }
+
 
 
