@@ -3,21 +3,29 @@
 
 body{
   font-family:Paytone One;
+  
+ 
 }
 
 header{
     display: grid;
-    grid-template-columns: 500px auto;
+    grid-template-columns: 400px auto;
     width: 1500px;
     margin-left: 60px;
     margin-bottom: 30px;
+  
+  
 }
 
 
 footer{
-    width: 1500px;
-    margin-left: 60px;
+    width: 1600px;
+   margin-left: 60px; 
     margin-bottom: 30px;
+    /* background-image: url('../img/Home/bk2.jpg');
+  background-repeat:repeat;
+  background-size:cover; */
+    
 }
 
 header section :nth-child(0){
@@ -74,6 +82,7 @@ h1 span{
 .shimmer {
     display: inline-block;
     color:white;
+   margin-top: 30px;
     
     background: #acacac -webkit-gradient(linear, 100% 0, 0 0, from(#acacac), color-stop(0.5, #ffffff), to(#acacac));
     
@@ -258,11 +267,14 @@ iframe{
 
         }
         #menue{
-          margin-top: 60px;
+          margin-top: 80px;
         }
         #logo{
-          margin-left: 60px;
-        }
+          width: 100px;
+          height: 100px;
+          margin-top: 10px;
+          margin-right: 5px;
+      }
         h6{
           font-family: "Times New Roman", Times, serif;
           font-weight: 300;
@@ -326,7 +338,16 @@ iframe{
         /* #subform{
           margin-left: 20px;
         } */
-      
+
+        .logoSection{
+          display: grid;
+            grid-template-columns: 110px 1fr;
+            margin-top: 30px;
+        }
+        .logoSection h1{
+          margin-left: 5px;
+          margin-bottom: 5px;
+        }
         
         
         
