@@ -2,20 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>health-coaching</title>
-  <link rel="stylesheet" href="../css/reset.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../css/loss-wieght.css">
+    <link rel="stylesheet" href="../css/buttons.css">
 
-  <link rel="stylesheet" href="../css/loss-wieght.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>loss-wieght</title>
 </head>
 
 <body>
+   <!-- <div class="video-container">
+            <video autoplay loop muted id="video-bg">
+      
+              <source src="../videos/video-1629146344.mp4" type="video/mp4">
+            </video>
+          </div> -->
   <!-- <div id='sideImg'>
     <img src="../img/loss-wieght-media/loss14.jpg" alt="">
   </div> -->
@@ -23,8 +31,16 @@
 
   </header>
   <main>
-  
-    <h1 class='header'> How to Lose Weight</h1>
+    <h1 class='animate__heartBeat'> How to Lose Weight</h1>
+    <h2>Don't let a stumble in the road be the end of your journey. ...</h2>
+    <div class="video-container">
+      <video autoplay loop muted id="video-bg">
+
+        <source src="../img/video-loss.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- <img  class="icon2" src="../img/13f9b2ca-2e84-41e3-8236-b53636fc38f2.jpg"> -->
+
 <section class="firstsection">
     <section class="sectionp">
       <p class='loss-p'>
@@ -69,37 +85,53 @@
     </section>
 
     <section class="imgsection1">
-      <div class="card-container1">
-        <div class="card1">
-          <div class="side1"><img src="../img/loss-wieght-media/loss3.jpg" alt="loss-wieght"></div>
-          <div class="side back1">Be optimistic!</div>
+      <div class="container">
+        <img src="../img/loss-wieght-media/loss3.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Be optimistic!</div>
         </div>
       </div>
-      <div class="card-container2">
-        <div class="card2">
-          <div class="side2"><img src="../img/loss-wieght-media/loss4.jpg" alt="loss-wieght"></div>
-          <div class="side back2">Do not give up!</div>
+        <div class="container">
+          <img src="../img/loss-wieght-media/loss2.jpg" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Stay strong!</div>
+          </div>
+        </div>
+        <div class="container">
+          <img src="../img/loss-wieght-media/loss9.jpg" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Be patient!</div>
+          </div>
+        </div>
+  
+      
+      <div class="container">
+        <img src="../img/loss-wieght-media/loss4.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Do not give up!</div>
         </div>
       </div>
+      
     </section>
 
   </section>
 
 
-    <section class="imgsection2">
-      <div class="card-container3">
-        <div class="card3">
-          <div class="side3"><img src="../img/loss-wieght-media/loss2.jpg" alt="loss-wieght"></div>
-          <div class="side back3">Stay strong!</div>
+    <!-- <section class="imgsection2">
+      <div class="container">
+        <img src="../img/loss-wieght-media/loss2.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Stay strong!</div>
         </div>
       </div>
-      <div class="card-container4">
-        <div class="card4">
-          <div class="side4"><img src="../img/loss-wieght-media/loss9.jpg" alt="loss-wieght"></div>
-          <div class="side back4">Be patient!</div>
+      <div class="container">
+        <img src="../img/loss-wieght-media/loss9.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Be patient!</div>
         </div>
       </div>
-      </section>
+  
+      </section> -->
 
     
     <section class='userInfo'>
@@ -107,9 +139,11 @@
         <table id="userInfo">
           <thead>
             <tr>
-              <th>name of user</th>
-              <th>User weight</th>
+              <th>First name</th>
+              <th>Last name</th>
               <th>Gender</th>
+              <th>weight</th>
+             
             </tr>
           </thead>
           <tbody></tbody>
@@ -117,18 +151,26 @@
         </table>
       </div>
     </section>
+    <!-- <img  class="icon1" src="../img/13f9b2ca-2e84-41e3-8236-b53636fc38f2.jpg"> -->
+    <img  class="icon1" src="../img/loss-wieght-media/tabel.jpg">
 
-    
-     <section class='section3'>
+    <section class='section3'>
       <div id='getAplan'>
       <h2 id='headerSection3'>Suggested plans</h2>
-        <button id='planButton'>Take a Plan</button>
-        <img id='planImg' src='../img/loss-wieght-media/plan/plan3.jpg' alt='plan-Img'>
+        <!-- <button id='planButton'>Take a Plan</button> -->
+        <button id="planButton" class="button button-highlight button-box button-large"
+        style="width: 200px;">Take a Plan<i class="fa fa-plus"></i></button>
       </div>
+        <img id='planImg' src='../img/51s38zS4ahL.jpg' alt='plan-Img'>
+      
+      </section> 
+
     
-    </section> 
-    <a href="../html/journey.html">Back to journey</a> 
-    <a href="../html/chart.html">more</a> 
+    <!-- <section class="more">
+      <button  src="../html/journey.html" class="back">Back to journey </button>
+      <button  src="./html/chart.html" class="back">more </button>
+
+  </section> -->
   </main>
   <footer></footer>
   

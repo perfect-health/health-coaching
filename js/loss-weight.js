@@ -1,14 +1,16 @@
 'use strict';
 let planArray = [
-    'plan1.jpg',
+    'plan1.jpg', 'plan3.jpg',
+    'plan6.jpeg', 'plan4.jpg',
+    'plan7.jpeg', 'plan5.jpg',
+    'plan8.jpeg',
+    'plan9.jpeg',
+    'plan10.jpeg',
     'plan2.jpg',
-    'plan3.jpg',
-    'plan4.jpg',
-    'plan5.jpg'
 ]
 let all = [];
 let counter = 0;
-//  let numberOfRound =5;
+// let numberOfRound =5;
 
 let planButton = document.getElementById('planButton');
 let planImg = document.getElementById('planImg');
@@ -31,7 +33,7 @@ function random(min, max) {
 
 function render() {
     let imgRandom = random(0, planArray.length - 1);
-    planImg.src = '../img/loss-wieght-media/plan/' + show.all[imgRandom].image;
+    planImg.src = '../img/loss-wieght-media/' + show.all[imgRandom].image;
     show.all[imgRandom].show++;
     console.log(show.all)
 }
@@ -46,54 +48,45 @@ function clicHandler(event) {
     }
 }
 
-getData();
 
+if(getData){
 const table = document.getElementById('userInfo');
 
-let userInfo;
+let userInfo=getData();
 let tbody = document.querySelector('tbody')
-  let c ;
-function loaduser() {
-  const userItems = JSON.parse(localStorage.getData('userInfo')) || [];
-  userInfo = new userInfo(user);
-  console.log(userInfo)
-}
-
-
-function renderUser() {
-  loadUser();
-  showUser();
-}
-
+showUser();
+localStorage.clear();
 function showUser() {
   
-  for (let i= 0 ;i< cart.items.length ;i++){
+  for (let i= 0 ;i<2 ;i++){
   
   let tr = document.createElement('tr')
-  tr.id = "row"+j
+  tr.id = "row"+i;
   tbody.appendChild(tr)
-  
-  let td= document.createElement('td')
-  td.textContent =`remove `
-  td.id ="delete"+i
-  tr.appendChild(td)
-  rem.push(td.id)
+
     let td1= document.createElement('td')
-    td1.textContent =cart.items[i].product
-    
+    td1.textContent =userInfo[i].firstName;
     tr.appendChild(td1)
+
     let td2= document.createElement('td')
-    td2.textContent =cart.items[i].quantity
-    tr.appendChild(td2)
+    td2.textContent =userInfo[i].lastName;
+    tr.appendChild(td2);
+   
+    let td3= document.createElement('td')
+    td3.textContent =userInfo[i].gender;
+    tr.appendChild(td3);
+
+    let td4= document.createElement('td')
+    td4.textContent =userInfo[i].weight;
+    tr.appendChild(td4);
+
+    let td5= document.createElement('td')
+    td5.textContent =userInfo[i].height;
+    tr.appendChild(td5);
   }
 }   
 
-  userInfo.saveToLocalStorage();
-  
-renderUser();
+  // userInfo.saveToLocalStorage();
+ 
 
-// function removeItem(){  //deletes item from localStorage
-//     var key = document.getElementById('removeKey').value;
-//     localStorage.removeItem(key)
-//     console.log("remove items");
-// }
+window.localStorage.clear();}
