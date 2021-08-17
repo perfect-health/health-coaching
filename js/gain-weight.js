@@ -4,6 +4,8 @@ let planArray = [
     'gainplan2.jpg',
     'gainplan3.jpg',
     'gainplan4.jpg',
+    'gainplan7.jpg',
+    'gainplan8.jpg',
     'gainplan5.jpg'
 ]
 let all = [];
@@ -31,7 +33,7 @@ function random(min, max) {
 
 function render() {
     let imgRandom = random(0, planArray.length - 1);
-    planImg.src = '..img/gain-wieght-media/gain-plan/' + show.all[imgRandom].image;
+    planImg.src = '../img/gain-wieght-media/gain-plan/' + show.all[imgRandom].image;
     show.all[imgRandom].show++;
     console.log(show.all)
 }
