@@ -31,19 +31,3 @@ var sites3 = [
 
 ];
 
-function randomSite3() {
-    var i = parseInt(Math.random() * sites3.length);
-    location.href = sites3[i];
-}
-
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("navbar").style.padding = "30px 10px";
-        document.getElementById("logo").style.fontSize = "25px";
-    } else {
-        document.getElementById("navbar").style.padding = "50px 10px";
-        document.getElementById("logo").style.fontSize = "35px";
-    }
-}
