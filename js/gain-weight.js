@@ -55,8 +55,7 @@ const table = document.getElementById('userInfo');
 let userInfo=getData();
 let tbody = document.querySelector('tbody')
 
-showUser();
-localStorage.clear();
+
 function showUser() {
   
   for (let i= 0 ;i<2 ;i++){
@@ -74,21 +73,22 @@ function showUser() {
     tr.appendChild(td2);
    
     let td3= document.createElement('td')
-    td3.textContent =userInfo[i].gender;
+    td3.textContent = 'your Gender: '+ userInfo[i].gender;
     tr.appendChild(td3);
 
     let td4= document.createElement('td')
-    td4.textContent =userInfo[i].weight;
+    td4.textContent ='Your Weight:  '+userInfo[i].weight;
     tr.appendChild(td4);
 
     let td5= document.createElement('td')
-    td5.textContent =userInfo[i].height;
+    td5.textContent ='and Height:  '+userInfo[i].height;
     tr.appendChild(td5);
   }
-//   localStorage.removeItem(userInfo);
+   localStorage.removeItem(userInfo);
 
 }   
+showUser();
+// localStorage.clear();
 
-  // userInfo.saveToLocalStorage();
- 
+  localStorage.removeItem(userInfo); 
   window.localStorage.clear();

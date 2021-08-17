@@ -87,6 +87,8 @@ function showUser() {
 }   
 
   // userInfo.saveToLocalStorage();
- 
+showUser();
+// localStorage.clear();
 
-window.localStorage.clear();}
+localStorage.removeItem(userInfo); 
+window.localStorage.clear();
