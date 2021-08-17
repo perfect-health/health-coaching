@@ -2,8 +2,12 @@
 
 body{
     width: 960px;
+    background-image: url('../img/service-img/background\ 1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
     
-}
 
 h1{
     color:#00C1D4 ;
@@ -17,6 +21,8 @@ h1{
     margin-left: 200px;
     width: 100%;
     margin-top: 200px;
+    background-image: url("../img/service-img/background-img1.html");
+
 
 
 }
