@@ -40,15 +40,15 @@ body{
 
 #beforeImage {
 
-    width: 300px ;
-    height: 250px;
+    width: 400px ;
+    height: 350px;
     border: 5px solid #00C1D4;
-    margin-left: 180px;
+    margin-left: 60px;
 
 }
 #afterImage{
-    width: 300px ;
-    height: 250px;
+    width: 400px ;
+    height: 350px;
     border: 5px solid #00C1D4;
    
 
@@ -59,7 +59,7 @@ body{
 
 .motivationStorySection{
     display: grid;
-    grid-template-columns: 650px auto;
+    grid-template-columns: auto auto;
     font-family: "Times New Roman", Times, serif;
     font-weight: 300;
     font-size: 19px;
@@ -67,27 +67,34 @@ body{
     color: #404040;
     
     width: 1380px;
-    height: 700px;
+    /* height: 700px; */
+    background-image:url('../img/Home/bk2.jpg') ; 
+    background-repeat:repeat;
+    background-size: contain; 
    
 
 }
 
 .sharedStoriesSection{
     
-     background-image:url('../img/imgTherapy/sq-Digital-Marketing-Examples.jpg') ; 
-    background-repeat: no-repeat;
-    background-size: contain; 
+    /* background-image:url('../img/Home/bk.jpg') ; 
+    background-repeat:repeat;
+    background-size: contain;  */
+    background-color: #E8F0F2;
     overflow: scroll;
-    width: 470px;
-    height: 630px;
-    margin-right: 100px;
-    margin-left: 100px;
-    background-color: #F3F2C9;
+    width: 700px;
+    height: 300px;
+    /* margin-left: 100px; */
+     /* margin-right: 100px; */
+    margin-left: 155px; 
+   
      
 }
 
 #successimg{
     margin-bottom: 60px;
+    width:350px ;
+    height: 350px;
   
 }
 
@@ -117,10 +124,10 @@ h3 span{
 
 }
 #after{
-margin-left: 100px;
+margin-left: 160px;
 }
 #before{
-    margin-left: 270px;
+    margin-left: 200px;
 }
 
 fieldset{
@@ -130,6 +137,6 @@ fieldset{
     
 }
 #storydiv{
-    margin-left: 100px;
+    margin-left: 20px;
 }
 

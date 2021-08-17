@@ -77,10 +77,11 @@ function showStory() {
   storiesProfile.textContent = ' ';
   let h1Element = document.createElement('h1');
   h1Element.textContent = 'MOTIVATION STORIES!';
+  h1Element.style.marginLeft = '170px';
   storiesProfile.appendChild(h1Element);
 
   let secElement = document.createElement('section');
-  secElement.style.marginLeft = '55px';
+  secElement.style.marginLeft = '10px';
   storiesProfile.appendChild(secElement);
 
 

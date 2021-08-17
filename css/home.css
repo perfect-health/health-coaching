@@ -49,6 +49,13 @@ header section :nth-child(0){
     grid-template-columns: 1fr 1fr;
     margin-top: 100px;
 }
+.sections1{
+
+  display: grid;
+  grid-template-columns: 650px 1fr;
+  margin-top: 100px;
+}
+
 #subscribe{
     
    
@@ -220,7 +227,7 @@ iframe{
 
 }
 #pvision{
- margin-right: 60px;
+ margin-right: 120px;
 
 }
 
@@ -328,8 +335,8 @@ iframe{
           color: white;
         }
         #socialmedia{
-          padding-left: 380px;
-          margin-top:65px;
+          padding-left: 340px;
+          margin-top:30px;
 
         }
         #alert{
@@ -347,6 +354,9 @@ iframe{
         .logoSection h1{
           margin-left: 5px;
           margin-bottom: 5px;
+        }
+        #sdiv{
+          margin-top: 90px;
         }
         
         
