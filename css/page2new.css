@@ -286,3 +286,4 @@ margin: 0 0.9rem;
 animation: bounce; /* referring directly to the animation's @keyframe declaration */
 animation-duration: 3s; /* don't forget to set a duration! */
 }
+
