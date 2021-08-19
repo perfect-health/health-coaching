@@ -47,18 +47,20 @@ function clicHandler(event) {
         console.log(event)
     }
 }
-
-
+let userInfo;
+if(localStorage.userData){
 
 const table = document.getElementById('userInfo');
+userInfo = JSON.parse(localStorage.userData)
 
-let userInfo=getData();
+// let userInfo=getData();
+
 let tbody = document.querySelector('tbody')
 
 
 function showUser() {
   
-  for (let i= 0 ;i<2 ;i++){
+  for (let i= 0 ;i<userInfo.length;i++){
     
   let tr = document.createElement('tr')
   tr.id = "row"+i;
@@ -86,9 +88,9 @@ function showUser() {
   }
    localStorage.removeItem(userInfo);
 
-}   
-showUser();
+}  showUser(); }
+
 // localStorage.clear();
 
-  localStorage.removeItem(userInfo); 
-  window.localStorage.clear();
+//   localStorage.removeItem(userInfo); 
+//   window.localStorage.clear();

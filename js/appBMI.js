@@ -1,9 +1,10 @@
 'use strict';
 
-window.addEventListener('load', () => {
-  const preload = document.querySelector('.preload');
-  preload.classList.add('preload-Finish');
-});
+// window.addEventListener('load', () => {
+//   const preload = document.querySelector('.preload');
+//   console.log(preload)
+//   preload.classList.add('preload-Finish');
+// });
 
 const userForm = document.getElementById('userForm');
 let userProfile = document.getElementById('userProfile');
@@ -25,7 +26,8 @@ function user(firstName, lastName, age, gender, weight, height, valueBMI) {
 
 user.allUsers = [];
 
-getData();
+// getData();
+// console.log(getData())
 console.log(user.allUsers);
 
 
@@ -79,7 +81,7 @@ function submitHandler(event) {
   let weight = parseFloat(event.target.weight.value);
   let height = parseFloat(event.target.height.value);
 
-  console.log(typeof firstName, lastName, age, gender, weight, height);
+  console.log( firstName, lastName, age, gender, weight, height);
 
   let newUser = new user(firstName, lastName, age, gender, weight, height, this.valueBMI);
   newUser.calculateBMI(weight, height);
@@ -87,7 +89,7 @@ function submitHandler(event) {
 
   console.log(user.allUsers);
   localStorage.userData = JSON.stringify(user.allUsers);
-  getData();
+  // getData();
 
 }
 
@@ -160,4 +162,3 @@ function getData() {
     return data;
   }
 }
-

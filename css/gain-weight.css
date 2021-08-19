@@ -47,7 +47,7 @@ position: absolute;
   .firstsection{
     display: flex;
     flex: auto auto;
-    margin-top: 650px;
+    margin-top: 700px;
     justify-content: center;
     gap: 30px;
 }
@@ -63,7 +63,7 @@ line-height: 40px;
 }
   #planImg{
       width: 600px;
-  height: 700px;
+  height: 677px;
   }  
   .loss-p{
     font-size: 20px;
@@ -91,6 +91,7 @@ line-height: 40px;
   
   }
   button {
+    margin: 40px;
     margin-inline-start: 640px;
     min-width: 300px;
     min-height: 60px;
